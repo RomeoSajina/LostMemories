@@ -11,14 +11,22 @@ public class Player : MonoBehaviour {
 
     float runningSpeed;
 
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
         runningSpeed = walkingSpeed * 1.5f;
+
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(Input.GetAxis("Vertical") != 0) {
+            anim.SetBool("isWalking", true);
+        } else {
+            anim.SetBool("isWalking", false);
+        }
 	}
 
     private void FixedUpdate () {
