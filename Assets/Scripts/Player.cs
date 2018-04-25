@@ -38,6 +38,14 @@ public class Player : MonoBehaviour {
             anim.SetBool("isWalking", false);
         }
 
+        //Crouch
+        if(Input.GetKey("c")){
+            anim.SetBool("onGround", true);
+        }else{
+            anim.SetBool("onGround", false);
+        }
+
+
         //Fade trasition
         if (Input.GetKey("f")) {
             StartCoroutine(FadeIn());
