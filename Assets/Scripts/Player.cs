@@ -48,6 +48,13 @@ public class Player : MonoBehaviour {
             anim.SetBool("isWalking", false);
         }
 
+        //Walking backwards animaton
+        if (Input.GetAxis("Vertical") < 0){
+            anim.SetFloat("Direction", -1.0f);
+        }else{
+            anim.SetFloat("Direction", 1.0f);
+        }
+
         //Running animation
         if (Input.GetKey("left shift")) {
             anim.SetBool("isRunning", true);
