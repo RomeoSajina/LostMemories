@@ -7665,6 +7665,7 @@ GameObject:
   - component: {fileID: 1274842418}
   - component: {fileID: 1274842417}
   - component: {fileID: 1274842421}
+  - component: {fileID: 1274842422}
   m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
@@ -7770,6 +7771,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 86bfffe46027f37458d0dc1e4b4af675, type: 2}
+--- !u!114 &1274842422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274842415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cc151d1691b074e9a42971caf8cfb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1277288411
 GameObject:
   m_ObjectHideFlags: 0
@@ -8837,10 +8849,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e7be4257fe4e14398a052f107ada31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 0
   rotationSpeed: 150
+  cameraZoom: {fileID: 1274842415}
   photoModeUI: {fileID: 918025834}
   batteryLife: {fileID: 1192792940}
   fadeImage: {fileID: 2142961655}
+  isPhotoModeActive: 0
   startingTime: 60
 --- !u!54 &1495275391
 Rigidbody:

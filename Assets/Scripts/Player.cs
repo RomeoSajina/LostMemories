@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
+    public bool canMove;
     public float rotationSpeed;
 
     Animator anim;
 
+    public GameObject cameraZoom;
     public GameObject photoModeUI;
     public Image batteryLife;
     public Image fadeImage;
 
-    bool isPhotoModeActive = false;
+    public bool isPhotoModeActive = false;
 
     public float startingTime;
     private float timeLeft;
@@ -21,13 +23,17 @@ public class Player : MonoBehaviour {
 
 	void Start () {
         anim = GetComponent<Animator>();
+        cameraZoom.GetComponent<CameraZoom>().enabled = false;
 
+        canMove = true;
         photoModeUI.SetActive(false);
         timeLeft = startingTime;
 	}
 	
 	void Update () {
-        HandleAnimatorStates();
+        if(canMove) {
+            HandleAnimatorStates();
+        }
         HandlePhotoMode();
     }
 
@@ -73,7 +79,9 @@ public class Player : MonoBehaviour {
     void HandlePhotoMode () {
         if (Input.GetKeyDown("f")) {
             StartCoroutine(FadeIn());
+            canMove = !canMove;
             isPhotoModeActive = !isPhotoModeActive;
+            cameraZoom.GetComponent<CameraZoom>().enabled = !cameraZoom.GetComponent<CameraZoom>().enabled;
         }
 
         /*Photo mode UI se samo prikazuje kad je aplha slike veca od 90%, tj. kada je korisniku ekran dovoljno
@@ -105,4 +113,5 @@ public class Player : MonoBehaviour {
             yield return null;
         }
     }
+
 }
