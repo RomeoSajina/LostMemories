@@ -1,0 +1,8 @@
+Ridge Dimensions:
+
+W: 10
+H: 5
+D: 5
+
+
+Extrude to Z: 20
