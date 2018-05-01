@@ -5,45 +5,63 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    public bool canMove;
-    public float rotationSpeed;
+    private GameManager gm;
+    private Animator anim;
+    private Rigidbody rb;
 
-    Animator anim;
+    public CapsuleCollider colliderStanding;
 
-    public GameObject cameraZoom;
-    public GameObject photoModeUI;
-    public Image batteryLife;
-    public Image fadeImage;
+    public float speed = 5f;
+    public float lookSensitivity = 3f;
 
-    public bool isPhotoModeActive = false;
-
-    public float startingTime;
-    private float timeLeft;
-
+    public Camera camera;
 
 	void Start () {
         anim = GetComponent<Animator>();
-        cameraZoom.GetComponent<CameraZoom>().enabled = false;
-
-        canMove = true;
-        photoModeUI.SetActive(false);
-        timeLeft = startingTime;
-	}
+        rb = GetComponent<Rigidbody>();
+        gm = GameManager.instance;
+    }
 	
 	void Update () {
-        if(canMove) {
+        if (gm.canMove) {
             HandleAnimatorStates();
-        }
-        HandlePhotoMode();
+        }     
     }
 
     private void FixedUpdate () {
+        if (gm.canMove) {
+            HandleMovement();
+        }
         HandleRotation();
     }
 
+    void HandleMovement () {
+        float xMov = Input.GetAxisRaw("Horizontal");
+        float zMov = Input.GetAxisRaw("Vertical");
+
+        Vector3 movHorizontal = transform.right * xMov;
+        Vector3 movVertical = transform.forward * zMov;
+
+        Vector3 velocity = (movHorizontal + movVertical).normalized * speed;
+
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+    }
+
     void HandleRotation () {
-        float rotationY = Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed;
-        transform.Rotate(0, rotationY, 0);
+        //Rotation
+        float yRot = Input.GetAxisRaw("Mouse X");
+
+        Vector3 rotation = new Vector3(0f, yRot, 0f) * lookSensitivity;
+
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+
+        //Camera rotation
+        float xRot = Input.GetAxisRaw("Mouse Y");
+
+        Vector3 cameraRotation = new Vector3(xRot, 0f, 0f) * lookSensitivity;
+
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+        camera.transform.Rotate(-cameraRotation);
     }
 
     void HandleAnimatorStates () {
@@ -71,47 +89,22 @@ public class Player : MonoBehaviour {
         //Crouch Animation
         if (Input.GetKey("c") || Input.GetKey("left ctrl")) {
             anim.SetBool("isCrouching", true);
+            Vector3 vector = new Vector3(0, 90, 15);
+            camera.transform.localPosition = vector;
+
+            Vector3 centerC = new Vector3(.6f, 42, -2);
+
+            colliderStanding.center = centerC;
+            colliderStanding.height = 85;
         } else {
             anim.SetBool("isCrouching", false);
+            Vector3 vector = new Vector3(0, 150, 15);
+            camera.transform.localPosition = vector;
+
+            Vector3 centerS = new Vector3(.6f, 82, -2);
+
+            colliderStanding.center = centerS;
+            colliderStanding.height = 164;
         }
     }
-
-    void HandlePhotoMode () {
-        if (Input.GetKeyDown("f")) {
-            StartCoroutine(FadeIn());
-            canMove = !canMove;
-            isPhotoModeActive = !isPhotoModeActive;
-            cameraZoom.GetComponent<CameraZoom>().enabled = !cameraZoom.GetComponent<CameraZoom>().enabled;
-        }
-
-        /*Photo mode UI se samo prikazuje kad je aplha slike veca od 90%, tj. kada je korisniku ekran dovoljno
-        zamracen da ne primjeti pojavljivanje UI-a*/
-        if(fadeImage.color.a >= 0.9) {
-            photoModeUI.SetActive(isPhotoModeActive);
-        }
-        
-        timeLeft -= Time.deltaTime;
-        batteryLife.fillAmount = timeLeft / startingTime;
-    }
-
-
-    //Photo mode transition
-    IEnumerator FadeIn () {
-        for (float i = 0; i <= 1; i += Time.deltaTime) {
-            fadeImage.color = new Color(0, 0, 0, i);
- 
-            yield return null;
-
-            StartCoroutine(FadeOut());
-        }
-    }
-
-    IEnumerator FadeOut () {
-        for (float i = 1; i >= 0; i -= Time.deltaTime) {
-            fadeImage.color = new Color(0, 0, 0, i);
-
-            yield return null;
-        }
-    }
-
 }

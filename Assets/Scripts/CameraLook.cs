@@ -22,6 +22,7 @@ public class CameraLook : MonoBehaviour {
         Quaternion xQuaternion = Quaternion.AngleAxis(rotationX, Vector3.up);
         Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, -Vector3.right);
         transform.localRotation = originalRotation * xQuaternion * yQuaternion;
+        //Camera rotation
     }
     void Start () {
         // Make the rigid body not change rotation
