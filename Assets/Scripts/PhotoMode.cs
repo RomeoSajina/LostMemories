@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class PhotoMode : MonoBehaviour {
+
+    Texture2D screenCap;
+    bool shot = false;
 
     private GameManager gm;
 
@@ -12,12 +16,19 @@ public class PhotoMode : MonoBehaviour {
     public Image fadeImage;
 
     public bool isPhotoModeActive = false;
+    private bool isZoomed = false;
 
     public float startingTime = 60;
     private float timeLeft;
 
+    int zoom = 20;
+    //Field of View Camera komponente
+    int normal = 60;
+    float smooth = 5;
+
 
     void Start () {
+        screenCap = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         photoModeUI.SetActive(false);
         timeLeft = startingTime;
         gm = GameManager.instance;
@@ -25,13 +36,37 @@ public class PhotoMode : MonoBehaviour {
 	
 	void Update () {
         HandlePhotoMode();
-	}
+    }
+
+    private void OnGUI()
+    {
+        if (shot){
+            GUI.DrawTexture(new Rect(10, 10, 60, 40), screenCap, ScaleMode.StretchToFill);
+        }
+    }
 
     void HandlePhotoMode () {
         if (Input.GetKeyDown("f")) {
             StartCoroutine(FadeIn());
             gm.ToggleMovement();
             isPhotoModeActive = !isPhotoModeActive;
+        }
+
+        if (Input.GetMouseButtonDown(0) && isPhotoModeActive){
+            StartCoroutine(Capture());
+        }
+
+        if (Input.GetMouseButtonDown(1) && isPhotoModeActive){
+            isZoomed = !isZoomed;
+        }
+
+        if (isZoomed){
+            //glatki prijelaz vidnog polja za svaki okvir (eng. frame)
+            GetComponent<Camera>().fieldOfView = Mathf.Lerp(GetComponent<Camera>().fieldOfView, zoom, Time.deltaTime * smooth);
+        }
+        else{
+            //Zoom-out
+            GetComponent<Camera>().fieldOfView = Mathf.Lerp(GetComponent<Camera>().fieldOfView, normal, Time.deltaTime * smooth);
         }
 
         /*Photo mode UI se samo prikazuje kad je aplha slike veca od 90%, tj. kada je korisniku ekran dovoljno
@@ -61,5 +96,16 @@ public class PhotoMode : MonoBehaviour {
 
             yield return null;
         }
+    }
+
+    IEnumerator Capture() {
+        yield return new WaitForEndOfFrame();
+        screenCap.ReadPixels(new Rect(0f, 0f, Screen.width, Screen.height), 0, 0);
+        screenCap.Apply();
+
+        byte[] bytes = screenCap.EncodeToPNG();
+        File.WriteAllBytes(Application.dataPath + "/SavedScreen.png", bytes);
+
+        shot = true;
     }
 }
