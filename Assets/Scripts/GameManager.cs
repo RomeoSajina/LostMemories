@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
 
+    public Enemy enemy;
+
     public bool canMove = true;
 
     private void Awake () {
@@ -15,6 +17,11 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+    }
+
+
+    public void Alert (Transform alert) {
+        enemy.HandleAlert(alert);
     }
 
     public void ToggleMovement () {

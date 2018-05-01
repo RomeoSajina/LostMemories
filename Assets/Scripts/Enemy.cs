@@ -34,13 +34,22 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    public void HandleAlert (Transform alert) {
+        agent.isStopped = true;
+        StartCoroutine(waitForSeconds(1));
+        var lookPos = alert.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50f);       
+    }
+
     void HandleRaycasting () {
         Debug.DrawLine(raycastStart.position, raycastTarget.position - transform.position, Color.blue);
 
         RaycastHit hit;
 
         if (Physics.Raycast(raycastStart.position, raycastTarget.position - transform.position, out hit, viewDistance)) {
-            Debug.Log(hit.transform.tag);
+            //Debug.Log(hit.transform.tag);
         }
     }
 
