@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 845c560b2fd8bd4458a3c01bea451194
+  - enabled: 1
+    path: Assets/Scenes/GreenForest.unity
+    guid: 53ac272433e17994e9ee57f2eaa6a75c
