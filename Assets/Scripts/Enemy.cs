@@ -50,11 +50,12 @@ public class Enemy : MonoBehaviour {
         isAlerted = true;
         alertPosition = alert;
         agent.isStopped = true;
-        anim.SetBool("isStanding", true);
         StartCoroutine(AlertStart(1));
     }
 
     public void HandleAlert () {
+        anim.SetBool("isStanding", true);
+
         var lookPos = alertPosition.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
