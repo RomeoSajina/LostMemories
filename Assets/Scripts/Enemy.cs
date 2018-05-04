@@ -9,13 +9,24 @@ public class Enemy : MonoBehaviour {
 
     public Transform raycastStart;
     public Transform raycastTarget;
+    private Transform alertPosition;
+
+    private Animator anim;
 
     public int viewDistance;
 
+    private bool isAlerted = false;
+
     int i = 0;
 
-	void Update () {
-        HandleMovement();
+    private void Start () {
+        anim = GetComponent<Animator>();
+    }
+
+    void Update () {
+        if (!isAlerted) {
+            HandleMovement();
+        }
         HandleRaycasting();
     }
 
@@ -30,17 +41,25 @@ public class Enemy : MonoBehaviour {
         if (transform.position.x == enemyPath[i % 5].position.x && transform.position.z == enemyPath[i % 5].position.z) {
             i++;
             agent.isStopped = true;
-            StartCoroutine(waitForSeconds(2));
+            anim.SetBool("isStanding", true);
+            StartCoroutine(WaitForSeconds(2));
         }
     }
 
-    public void HandleAlert (Transform alert) {
+    public void Alert(Transform alert) {
+        isAlerted = true;
+        alertPosition = alert;
         agent.isStopped = true;
-        StartCoroutine(waitForSeconds(1));
-        var lookPos = alert.position - transform.position;
+        anim.SetBool("isStanding", true);
+        StartCoroutine(AlertStart(1));
+    }
+
+    public void HandleAlert () {
+        var lookPos = alertPosition.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50f);       
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50f);
+        StartCoroutine(AlertEnd(1));
     }
 
     void HandleRaycasting () {
@@ -53,8 +72,21 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    IEnumerator waitForSeconds (int seconds) {
+    IEnumerator AlertStart (int seconds) {
+        yield return new WaitForSeconds(seconds);
+        HandleAlert();
+    }
+
+    IEnumerator AlertEnd (int seconds) {
+        yield return new WaitForSeconds(seconds);
+        isAlerted = false;
+        agent.isStopped = false;
+        anim.SetBool("isStanding", false);
+    }
+
+    IEnumerator WaitForSeconds (int seconds) {
         yield return new WaitForSeconds(seconds);
         agent.isStopped = false;
+        anim.SetBool("isStanding", false);
     }
 }

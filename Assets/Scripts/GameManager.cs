@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 
 
     public void Alert (Transform alert) {
-        enemy.HandleAlert(alert);
+        enemy.Alert(alert);
     }
 
     public void ToggleMovement () {
