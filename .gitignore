@@ -4,6 +4,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/Assets/Resources/levels/FallenSchool/Show/LightingData.asset
 
 # Visual Studio 2015 cache directory
 /.vs/
