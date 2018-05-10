@@ -4,8 +4,11 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    public Transform[] enemyPath;
+    public Transform[] enemyPathPreAlert;
+    public Transform[] enemyPathPostAlert;
     public NavMeshAgent agent;
+
+    private Transform[] enemyPath;
 
     public Transform raycastStart;
     public Transform raycastTarget;
@@ -21,6 +24,8 @@ public class Enemy : MonoBehaviour {
 
     private void Start () {
         anim = GetComponent<Animator>();
+
+        enemyPath = enemyPathPreAlert;
     }
 
     void Update () {
@@ -32,6 +37,7 @@ public class Enemy : MonoBehaviour {
 
     void HandleMovement () {
         agent.SetDestination(enemyPath[i % 5].position);
+        //Debug.Log(enemyPath[i % 5].position);
 
         var lookPos = enemyPath[i % 5].position - transform.position;
         lookPos.y = 0;
@@ -47,6 +53,7 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Alert(Transform alert) {
+        enemyPath = enemyPathPostAlert;
         isAlerted = true;
         alertPosition = alert;
         agent.isStopped = true;
@@ -65,11 +72,16 @@ public class Enemy : MonoBehaviour {
 
     void HandleRaycasting () {
         Debug.DrawLine(raycastStart.position, raycastTarget.position - transform.position, Color.blue);
+        Debug.Log(raycastTarget.position);
 
         RaycastHit hit;
 
         if (Physics.Raycast(raycastStart.position, raycastTarget.position - transform.position, out hit, viewDistance)) {
-            //Debug.Log(hit.transform.tag);
+            Debug.Log(hit.transform.tag);
+            if (hit.transform.tag == "Player") {
+                Debug.Log("Player");
+                Time.timeScale = 0;
+            }
         }
     }
 
