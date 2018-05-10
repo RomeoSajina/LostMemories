@@ -36,6 +36,7 @@ public class PhotoMode : MonoBehaviour {
 	
 	void Update () {
         HandlePhotoMode();
+        Debug.DrawLine(transform.position, transform.forward, Color.blue);
     }
 
     private void OnGUI()
@@ -54,6 +55,7 @@ public class PhotoMode : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0) && isPhotoModeActive){
             StartCoroutine(Capture());
+            HandleDetection();
         }
 
         if (Input.GetMouseButtonDown(1) && isPhotoModeActive){
@@ -77,6 +79,21 @@ public class PhotoMode : MonoBehaviour {
 
         timeLeft -= Time.deltaTime;
         batteryLife.fillAmount = timeLeft / startingTime;
+    }
+
+    void HandleDetection () {
+        Debug.DrawLine(transform.position, transform.forward, Color.blue);
+        //Debug.Log(raycastTarget.position);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit)) {
+            Debug.Log(hit.transform.tag);
+            if (hit.transform.tag == "Player") {
+                Debug.Log("Player");
+                Time.timeScale = 0;
+            }
+        }
     }
 
     //Photo mode transition

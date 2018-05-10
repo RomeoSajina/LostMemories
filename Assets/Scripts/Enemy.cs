@@ -72,12 +72,12 @@ public class Enemy : MonoBehaviour {
 
     void HandleRaycasting () {
         Debug.DrawLine(raycastStart.position, raycastTarget.position - transform.position, Color.blue);
-        Debug.Log(raycastTarget.position);
+        //Debug.Log(raycastTarget.position);
 
         RaycastHit hit;
 
         if (Physics.Raycast(raycastStart.position, raycastTarget.position - transform.position, out hit, viewDistance)) {
-            Debug.Log(hit.transform.tag);
+            //Debug.Log(hit.transform.tag);
             if (hit.transform.tag == "Player") {
                 Debug.Log("Player");
                 Time.timeScale = 0;
