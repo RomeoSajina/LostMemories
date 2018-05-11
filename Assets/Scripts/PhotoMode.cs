@@ -15,6 +15,8 @@ public class PhotoMode : MonoBehaviour {
     public Image batteryLife;
     public Image fadeImage;
 
+    public GameObject photoPoint;
+
     public bool isPhotoModeActive = false;
     private bool isZoomed = false;
 
@@ -82,16 +84,16 @@ public class PhotoMode : MonoBehaviour {
     }
 
     void HandleDetection () {
-        Debug.DrawLine(transform.position, transform.forward, Color.blue);
-        //Debug.Log(raycastTarget.position);
-
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, transform.forward, out hit)) {
             Debug.Log(hit.transform.tag);
-            if (hit.transform.tag == "Player") {
-                Debug.Log("Player");
-                Time.timeScale = 0;
+            float camX, camZ;
+            camX = transform.position.x;
+            camZ = transform.position.z; 
+
+            if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
+                Debug.Log("Usliakano!");
             }
         }
     }
