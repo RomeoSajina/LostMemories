@@ -3884,8 +3884,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56302329}
-  m_LocalRotation: {x: 0.01226175, y: -0.37133276, z: 0.0048640957, w: 0.9284062}
-  m_LocalPosition: {x: 65.78558, y: 41.844795, z: 308.236}
+  m_LocalRotation: {x: -0, y: 0.0014747625, z: -0, w: 0.9999989}
+  m_LocalPosition: {x: 32.532135, y: 38.700584, z: 299.01688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -12891,6 +12891,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76075d4f24491b84eb0b4ac914362e3f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &342785169 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114965718234582242, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1807958732}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &344047555 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5d4cffe5f1249a046b3bc42bbd99dc47, type: 2}
@@ -23302,6 +23308,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f282d9fb9b399dd4384b20aba08642fb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1488329117 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114690672731099218, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1807958732}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1493759632 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: fa253cf607fbb5a4d9cbbb98c7739042, type: 2}
@@ -24510,6 +24522,11 @@ Transform:
   m_Father: {fileID: 718552720}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1624914748 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1950104071207146, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1807958732}
 --- !u!1 &1627374612
 GameObject:
   m_ObjectHideFlags: 0
@@ -35085,6 +35102,21 @@ Prefab:
       propertyPath: photoPoint
       value: 
       objectReference: {fileID: 1594404162}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: photoModeUI
+      value: 
+      objectReference: {fileID: 1624914748}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: batteryLife
+      value: 
+      objectReference: {fileID: 1488329117}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: fadeImage
+      value: 
+      objectReference: {fileID: 342785169}
     m_RemovedComponents:
     - {fileID: 114226278755396808, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
