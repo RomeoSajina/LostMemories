@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fadbd9e2ad5824c9d87dadcd9be7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 395930696}
   agent: {fileID: 35768243}
   firePlaceLocation: {fileID: 1501546539}
   raycastStart: {fileID: 376358045}
@@ -3896,6 +3897,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &395930696 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 395930695}
 --- !u!1 &397036853
 GameObject:
   m_ObjectHideFlags: 0

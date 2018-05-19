@@ -14,3 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GreenForest.unity
     guid: 53ac272433e17994e9ee57f2eaa6a75c
+  - enabled: 1
+    path: Assets/Scenes/FantasyRoom.unity
+    guid: a12f74e6765242b468a36d221a292611
+  - enabled: 1
+    path: Assets/Scenes/FallenSchool.unity
+    guid: 5a2ec426957a49c40a87e4aa0926e907
+  - enabled: 1
+    path: Assets/Scenes/ColdSnow.unity
+    guid: 174cc1954a40f4a4180d616e4d04133c

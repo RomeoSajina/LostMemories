@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+    public GameObject gameOver;
+
     public Transform[] enemyPathPreAlert;
     public Transform[] enemyPathPostAlert;
     public NavMeshAgent agent;
@@ -81,6 +83,7 @@ public class Enemy : MonoBehaviour {
             if (hit.transform.tag == "Player") {
                 Debug.Log("Player");
                 Time.timeScale = 0;
+                gameOver.SetActive(true);
             }
         }
     }
