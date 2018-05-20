@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -132,6 +132,11 @@ MonoBehaviour:
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 0, a: 1}
   outlineWidth: 2
+--- !u!1 &47800970 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 146249428}
 --- !u!114 &85282217 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114690672731099218, guid: 8a4518e061ed0ce409db550177fd829d,
@@ -1189,7 +1194,7 @@ Prefab:
     - target: {fileID: 195390146487047324, guid: 0f9bf8fa2765dcf4188c600e5492ac2e,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4437218499887192, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
       propertyPath: m_LocalScale.x
@@ -1203,6 +1208,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114363472069011348, guid: 0f9bf8fa2765dcf4188c600e5492ac2e,
+        type: 2}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 47800970}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
   m_IsPrefabParent: 0
@@ -1894,7 +1904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintText: {fileID: 974245026}
-  hint: I used to live sittng in front of the fireplace
+  hint: I used to love sittng by the fireplace
 --- !u!1 &1955748246
 GameObject:
   m_ObjectHideFlags: 0
