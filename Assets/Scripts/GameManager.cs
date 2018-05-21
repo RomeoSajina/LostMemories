@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
 
     public void Alert (Transform alert) {
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
         enemy.Alert(alert);
     }
 

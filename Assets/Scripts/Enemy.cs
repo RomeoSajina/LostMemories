@@ -26,17 +26,25 @@ public class Enemy : MonoBehaviour {
 
     private void Start () {
         anim = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
+        agent.ResetPath();
+        //agent.isStopped = false;
+
+        //gameObject.SetActive(true);
+
+        //agent.SetDestination(Vector3.zero);
+
+        //Destroy(GetComponent<NavMeshAgent>());
+        //NavMeshAgent agent = gameObject.AddComponent(typeof(NavMeshAgent)) as NavMeshAgent;
 
         enemyPath = enemyPathPreAlert;
     }
 
     void Update () {
-        agent = GetComponent<NavMeshAgent>();
         if (!isAlerted) {
             HandleMovement();
         }
         HandleRaycasting();
+        gameObject.SetActive(true);
     }
 
     void HandleMovement () {
@@ -57,6 +65,9 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Alert(Transform alert) {
+        Debug.Log("Active? " + gameObject.activeInHierarchy);
+        //Debug.Break();
+        gameObject.SetActive(true);
         enemyPath = enemyPathPostAlert;
         isAlerted = true;
         alertPosition = alert;
@@ -90,7 +101,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    IEnumerator AlertStart (int seconds) {
+    public IEnumerator AlertStart (int seconds) {
         yield return new WaitForSeconds(seconds);
         HandleAlert();
     }
