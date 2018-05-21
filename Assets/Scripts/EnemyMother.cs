@@ -12,6 +12,13 @@ public class EnemyMother : MonoBehaviour {
     public Transform raycastStart;
     public Transform raycastTarget;
 
+    private Animator anim;
+
+    void Start(){
+        anim = GetComponent<Animator>();
+        anim.SetBool("isStanding", true);
+    }
+
     private void Update () {
         HandleRaycasting();
     }
@@ -38,6 +45,7 @@ public class EnemyMother : MonoBehaviour {
                                        this.transform.position.y,
                                        firePlaceLocation.position.z);
         this.transform.LookAt(targetPostition);*/
+        anim.SetBool("isStanding", false);
     }
 
     public IEnumerator StartAlert (int seconds) {
