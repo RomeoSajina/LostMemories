@@ -26,11 +26,13 @@ public class Enemy : MonoBehaviour {
 
     private void Start () {
         anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
 
         enemyPath = enemyPathPreAlert;
     }
 
     void Update () {
+        agent = GetComponent<NavMeshAgent>();
         if (!isAlerted) {
             HandleMovement();
         }
