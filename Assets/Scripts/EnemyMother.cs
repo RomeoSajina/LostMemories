@@ -5,7 +5,6 @@ using UnityEngine.AI;
 public class EnemyMother : MonoBehaviour {
 
     public GameObject gameOver;
-    public GameObject firePoint;
 
     public NavMeshAgent agent;
 
@@ -22,6 +21,12 @@ public class EnemyMother : MonoBehaviour {
 
     private void Update () {
         HandleRaycasting();
+
+        if (Mathf.Abs(transform.position.x - firePlaceLocation.position.x) < .1f && Mathf.Abs(transform.position.z - firePlaceLocation.position.z) < .1f) {
+            anim.SetBool("isCrouching", true);
+
+            transform.eulerAngles = new Vector3(0, -90, 0);
+        }
     }
 
     void HandleRaycasting () {
@@ -47,10 +52,6 @@ public class EnemyMother : MonoBehaviour {
                                        firePlaceLocation.position.z);
         this.transform.LookAt(targetPostition);*/
         anim.SetBool("isStanding", false);
-
-        if(agent.transform.position == raycastTarget.position) {
-            anim.SetBool("isCrouching", true);
-        }
     }
 
     public IEnumerator StartAlert (int seconds) {

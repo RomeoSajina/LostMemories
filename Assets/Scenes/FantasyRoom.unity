@@ -238,7 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 478844238}
-  firePoint: {fileID: 1501546538}
   agent: {fileID: 35768243}
   firePlaceLocation: {fileID: 1501546539}
   raycastStart: {fileID: 376358045}
@@ -16251,7 +16250,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1501546538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.81, y: 1.005, z: 83.736}
+  m_LocalPosition: {x: -45.406, y: 1, z: 83.674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16644,7 +16643,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081913771}
   m_LocalRotation: {x: -0, y: -0.0086555695, z: -0, w: 0.99996257}
-  m_LocalPosition: {x: -57.62, y: 4.06, z: 76.38}
+  m_LocalPosition: {x: -45.56, y: -0.12, z: 80.91}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_Children:
   - {fileID: 182915789}
