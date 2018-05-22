@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 478844238}
+  firePoint: {fileID: 1501546538}
   agent: {fileID: 35768243}
   firePlaceLocation: {fileID: 1501546539}
   raycastStart: {fileID: 376358045}
