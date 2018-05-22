@@ -84,7 +84,7 @@ public class PhotoMode : MonoBehaviour {
         batteryLife.fillAmount = timeLeft / startingTime;
     }
 
-    void HandleDetection () {
+    void HandleDetection () {   
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, transform.forward, out hit)) {
