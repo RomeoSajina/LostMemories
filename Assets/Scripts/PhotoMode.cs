@@ -43,8 +43,7 @@ public class PhotoMode : MonoBehaviour {
         Debug.DrawLine(transform.position, transform.forward, Color.blue);
     }
 
-    private void OnGUI()
-    {
+    private void OnGUI() {
         if (shot){
             GUI.DrawTexture(new Rect(10, 10, 60, 40), screenCap, ScaleMode.StretchToFill);
         }
@@ -96,7 +95,7 @@ public class PhotoMode : MonoBehaviour {
 
             if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
                 Debug.Log("Usliakano!");
-                gameWin.SetActive(true);
+                gm.HandleWin();
             }
         }
     }

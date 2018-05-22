@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    public GameObject gameOver;
+    public GameManager gm;
 
     public Transform[] enemyPathPreAlert;
     public Transform[] enemyPathPostAlert;
@@ -26,15 +26,7 @@ public class Enemy : MonoBehaviour {
 
     private void Start () {
         anim = GetComponent<Animator>();
-        agent.ResetPath();
-        //agent.isStopped = false;
-
-        //gameObject.SetActive(true);
-
-        //agent.SetDestination(Vector3.zero);
-
-        //Destroy(GetComponent<NavMeshAgent>());
-        //NavMeshAgent agent = gameObject.AddComponent(typeof(NavMeshAgent)) as NavMeshAgent;
+        gm = GameManager.instance;
 
         enemyPath = enemyPathPreAlert;
     }
@@ -44,7 +36,6 @@ public class Enemy : MonoBehaviour {
             HandleMovement();
         }
         HandleRaycasting();
-        gameObject.SetActive(true);
     }
 
     void HandleMovement () {
@@ -65,9 +56,6 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Alert(Transform alert) {
-        Debug.Log("Active? " + gameObject.activeInHierarchy);
-        //Debug.Break();
-        gameObject.SetActive(true);
         enemyPath = enemyPathPostAlert;
         isAlerted = true;
         alertPosition = alert;
@@ -96,7 +84,7 @@ public class Enemy : MonoBehaviour {
             if (hit.transform.tag == "Player") {
                 Debug.Log("Player");
                 Time.timeScale = 0;
-                gameOver.SetActive(true);
+                gm.HandleDeath();
             }
         }
     }

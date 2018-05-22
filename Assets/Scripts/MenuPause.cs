@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class MenuPause : MonoBehaviour {
 
     private Scene scene;
+    private GameManager gm;
 
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
 
     void Start() {
+        gm = GameManager.instance;
+
         Time.timeScale = 1f;
         scene = SceneManager.GetActiveScene();
     }
@@ -61,6 +64,8 @@ public class MenuPause : MonoBehaviour {
 
     public void NextLevel(){
         int index = scene.buildIndex + 1;
+        gm.ToggleMovement();
+
         SceneManager.LoadScene(index);
     }
 

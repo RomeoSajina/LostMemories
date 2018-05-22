@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour {
 
     public Enemy enemy;
 
+    public GameObject deathUI;
+    public GameObject winUI;
+
     public bool canMove = true;
 
     private void Awake () {
@@ -19,6 +22,14 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+    public void HandleDeath () {
+        deathUI.SetActive(true);
+    }
+
+    public void HandleWin () {
+        winUI.SetActive(true);
+        Time.timeScale = 0;
+    }
 
     public void Alert (Transform alert) {
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
