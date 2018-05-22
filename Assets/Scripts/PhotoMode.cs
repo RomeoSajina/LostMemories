@@ -6,6 +6,8 @@ using System.IO;
 
 public class PhotoMode : MonoBehaviour {
 
+    public GameObject gameWin;
+
     Texture2D screenCap;
     bool shot = false;
 
@@ -94,6 +96,7 @@ public class PhotoMode : MonoBehaviour {
 
             if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
                 Debug.Log("Usliakano!");
+                gameWin.SetActive(true);
             }
         }
     }

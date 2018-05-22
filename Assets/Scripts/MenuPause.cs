@@ -59,4 +59,9 @@ public class MenuPause : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    public void NextLevel(){
+        int index = scene.buildIndex + 1;
+        SceneManager.LoadScene(index);
+    }
+
 }

@@ -15302,6 +15302,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f282d9fb9b399dd4384b20aba08642fb, type: 2}
   m_PrefabInternal: {fileID: 685671500}
+--- !u!1 &676823760 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1807958732}
 --- !u!1001 &685671500
 Prefab:
   m_ObjectHideFlags: 0
@@ -22309,8 +22314,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: -0, y: 0.0014747625, z: -0, w: 0.9999989}
-  m_LocalPosition: {x: 32.532135, y: 65.975075, z: 299.01688}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 32.54309, y: 67.335075, z: 304.257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -29546,41 +29551,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114783983434659646, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 224995338894022292, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
   m_IsPrefabParent: 0
@@ -35571,6 +35541,11 @@ Prefab:
       propertyPath: fadeImage
       value: 
       objectReference: {fileID: 342785169}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: gameWin
+      value: 
+      objectReference: {fileID: 676823760}
     m_RemovedComponents:
     - {fileID: 114226278755396808, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
@@ -35774,7 +35749,7 @@ Transform:
   m_PrefabInternal: {fileID: 1563044345}
 --- !u!1 &2120441152 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d,
+  m_PrefabParentObject: {fileID: 1004170980345918, guid: 8a4518e061ed0ce409db550177fd829d,
     type: 2}
   m_PrefabInternal: {fileID: 1807958732}
 --- !u!1001 &2128587378

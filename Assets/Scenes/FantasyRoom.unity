@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fadbd9e2ad5824c9d87dadcd9be7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 395930696}
+  gameOver: {fileID: 478844238}
   agent: {fileID: 35768243}
   firePlaceLocation: {fileID: 1501546539}
   raycastStart: {fileID: 376358045}
@@ -1621,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fe34953fb55cd4cbfdac6ea63e4dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameWin: {fileID: 395930696}
   photoModeUI: {fileID: 1785318293}
   batteryLife: {fileID: 482261490}
   fadeImage: {fileID: 165189698}
@@ -3940,10 +3941,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114783983434659646, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+    - target: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
@@ -4633,6 +4633,11 @@ Transform:
   m_Father: {fileID: 521453767}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &478844238 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1004170980345918, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 395930695}
 --- !u!1 &479332508
 GameObject:
   m_ObjectHideFlags: 0
