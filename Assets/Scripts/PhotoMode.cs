@@ -22,7 +22,7 @@ public class PhotoMode : MonoBehaviour {
     public bool isPhotoModeActive = false;
     private bool isZoomed = false;
 
-    public float startingTime = 60;
+    public float startingTime = 180;
     private float timeLeft;
 
     int zoom = 20;

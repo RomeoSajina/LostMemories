@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     public GameObject winUI;
 
     public bool canMove = true;
-
+    
     private void Awake () {
         if (instance == null)
             instance = this;
@@ -23,10 +23,12 @@ public class GameManager : MonoBehaviour {
     }
 
     public void HandleDeath () {
+        //deathUI = GameObject.FindGameObjectWithTag("lose");
         deathUI.SetActive(true);
     }
 
     public void HandleWin () {
+        //winUI = GameObject.FindGameObjectWithTag("win");
         winUI.SetActive(true);
         Time.timeScale = 0;
     }

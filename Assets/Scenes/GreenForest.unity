@@ -13726,8 +13726,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410145122}
-  m_LocalRotation: {x: -0.2634311, y: 0.42975503, z: 0.13265656, w: 0.8534149}
-  m_LocalPosition: {x: 60.32196, y: 39.98127, z: 311.42612}
+  m_LocalRotation: {x: -0.0038701883, y: 0.9784171, z: 0.20579208, w: 0.0182962}
+  m_LocalPosition: {x: 12.642303, y: -719.2535, z: 1202.9282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -14755,7 +14755,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 558303659}
   m_LocalRotation: {x: -0, y: 0.0014747625, z: -0, w: 0.9999989}
-  m_LocalPosition: {x: 32.532135, y: 65.975075, z: 299.01688}
+  m_LocalPosition: {x: 85.07214, y: 77.05508, z: 95.82687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -15534,6 +15534,20 @@ Prefab:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 2120441152}
+    - target: {fileID: 114582437570017326, guid: 0f9bf8fa2765dcf4188c600e5492ac2e,
+        type: 2}
+      propertyPath: viewDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923280614267700, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582437570017326, guid: 0f9bf8fa2765dcf4188c600e5492ac2e,
+        type: 2}
+      propertyPath: raycastTarget
+      value: 
+      objectReference: {fileID: 2070629785}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
   m_IsPrefabParent: 0
@@ -19897,7 +19911,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1651185164087608, guid: 40bb6295d8f271a45873f75c276dc79b, type: 2}
       propertyPath: m_Name
-      value: HintTrigger (1)
+      value: HintTrigger_Cabin
       objectReference: {fileID: 0}
     - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
         type: 2}
@@ -19907,7 +19921,7 @@ Prefab:
     - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
         type: 2}
       propertyPath: hint
-      value: //TODO hint za kucicu
+      value: The cabin was your favourite place to hide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bb6295d8f271a45873f75c276dc79b, type: 2}
@@ -22417,8 +22431,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: -0.2634311, y: 0.42975503, z: 0.13265656, w: 0.8534149}
-  m_LocalPosition: {x: 60.32196, y: 67.25576, z: 311.42612}
+  m_LocalRotation: {x: -0.0038701883, y: 0.9784171, z: 0.20579208, w: 0.0182962}
+  m_LocalPosition: {x: 57.812073, y: -160.07361, z: -4.730835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -29654,34 +29668,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1004170980345918, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114065188943699056, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114065188943699056, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114065188943699056, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114065188943699056, guid: 8a4518e061ed0ce409db550177fd829d,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
   m_IsPrefabParent: 0
@@ -35685,10 +35671,20 @@ Prefab:
       propertyPath: gameWin
       value: 
       objectReference: {fileID: 676823760}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: startingTime
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114226278755396808, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2070629785 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4033968561577980, guid: 7371f33ea53b2e94188cf1622ee103f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2070629784}
 --- !u!4 &2075945586 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 272f6ea372a7343499b5aa612014761f, type: 2}
