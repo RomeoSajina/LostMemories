@@ -6,8 +6,6 @@ using System.IO;
 
 public class PhotoMode : MonoBehaviour {
 
-    public GameObject gameWin;
-
     Texture2D screenCap;
     bool shot = false;
 
@@ -35,7 +33,7 @@ public class PhotoMode : MonoBehaviour {
         screenCap = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         photoModeUI.SetActive(false);
         timeLeft = startingTime;
-        gm = GameManager.instance;
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 	
 	void Update () {
@@ -94,7 +92,7 @@ public class PhotoMode : MonoBehaviour {
             camZ = transform.position.z; 
 
             if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
-                Debug.Log("Usliakano!");
+                Debug.Log("Uslikano!");
                 gm.HandleWin();
             }
         }

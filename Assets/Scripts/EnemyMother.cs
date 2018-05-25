@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyMother : MonoBehaviour {
 
-    public GameObject gameOver;
+    public GameManager gm;
 
     public NavMeshAgent agent;
 
@@ -40,7 +40,7 @@ public class EnemyMother : MonoBehaviour {
             if (hit.transform.tag == "Player") {
                 Debug.Log("Player");
                 Time.timeScale = 0;
-                gameOver.SetActive(true);
+                gm.HandleDeath();
             }
         }
     }

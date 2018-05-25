@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour {
 
     private void Start () {
         anim = GetComponent<Animator>();
-        gm = GameManager.instance;
 
         enemyPath = enemyPathPreAlert;
     }
@@ -74,7 +73,7 @@ public class Enemy : MonoBehaviour {
     }
 
     void HandleRaycasting () {
-        Debug.DrawLine(raycastStart.position, raycastTarget.position - transform.position, Color.blue);
+        //Debug.DrawLine(raycastStart.position, raycastTarget.position - transform.position, Color.blue);
         //Debug.Log(raycastTarget.position);
 
         RaycastHit hit;

@@ -4,23 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager instance = null;
-
-    public Enemy enemy;
+    private Enemy enemy;
 
     public GameObject deathUI;
     public GameObject winUI;
 
     public bool canMove = true;
-    
-    private void Awake () {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
-    }
 
     public void HandleDeath () {
         //deathUI = GameObject.FindGameObjectWithTag("lose");

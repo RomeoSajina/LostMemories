@@ -6,20 +6,25 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
     private GameManager gm;
+    private AudioManager am
     private Animator anim;
     private Rigidbody rb;
 
     public CapsuleCollider colliderStanding;
 
-    public float speed = 5f;
+    public float walkingSpeed = 5f;
+    public float runningSpeed;
     public float lookSensitivity = 3f;
+
+    public Transform groundCheck;
 
     public Camera camera;
 
 	void Start () {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        gm = GameManager.instance;
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        am = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 	
 	void Update () {
@@ -42,7 +47,13 @@ public class Player : MonoBehaviour {
         Vector3 movHorizontal = transform.right * xMov;
         Vector3 movVertical = transform.forward * zMov;
 
-        Vector3 velocity = (movHorizontal + movVertical).normalized * speed;
+        Vector3 velocity;
+
+        if (Input.GetKey("left shift")) {
+            velocity = (movHorizontal + movVertical).normalized * runningSpeed;
+        } else {
+            velocity = (movHorizontal + movVertical).normalized * walkingSpeed;
+        }
 
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
@@ -62,6 +73,12 @@ public class Player : MonoBehaviour {
 
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
         camera.transform.Rotate(-cameraRotation);
+    }
+
+    private void OnCollisionEnter (Collision other) {
+        Debug.Log(other.transform.tag);
+
+        //am.Play(other.transform.tag);
     }
 
     void HandleAnimatorStates () {

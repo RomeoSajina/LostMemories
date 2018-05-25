@@ -10,8 +10,8 @@ TagManager:
   - water
   - Enemy
   - FixedDoor
-  - lose
-  - win
+  - GameManager
+  - AudioManager
   layers:
   - Default
   - TransparentFX

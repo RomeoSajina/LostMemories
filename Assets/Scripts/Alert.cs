@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Alert : MonoBehaviour {
+
+    private GameManager gm;
         
     private void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player")) {
             Debug.Log("Alert");
-            GameManager.instance.Alert(gameObject.transform);
+            gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         }
     }
 }

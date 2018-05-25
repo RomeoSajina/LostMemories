@@ -13,8 +13,6 @@ public class MenuPause : MonoBehaviour {
     public GameObject pauseMenuUI;
 
     void Start() {
-        gm = GameManager.instance;
-
         Time.timeScale = 1f;
         scene = SceneManager.GetActiveScene();
     }
@@ -22,13 +20,11 @@ public class MenuPause : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)){
-
             if (GameIsPaused){
                 Resume();
             }else{
                 Pause();
             }
-
         }
     }
 
@@ -65,6 +61,8 @@ public class MenuPause : MonoBehaviour {
     public void NextLevel(){
         int index = scene.buildIndex + 1;
         gm.ToggleMovement();
+
+        PlayerPrefs.SetInt("levelReached", scene.buildIndex);
 
         SceneManager.LoadScene(index);
     }
