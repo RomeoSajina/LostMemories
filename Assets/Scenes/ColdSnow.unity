@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1481,7 +1481,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2064937066
+  randomSeed: 799979938
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5686,6 +5686,16 @@ Prefab:
       propertyPath: fadeImage
       value: 
       objectReference: {fileID: 431437971}
+    - target: {fileID: 114956174936646266, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: walkingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956174936646266, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: runningSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_IsPrefabParent: 0
@@ -6209,7 +6219,7 @@ GameObject:
   - component: {fileID: 1476605953}
   m_Layer: 8
   m_Name: Snow Plane
-  m_TagString: Untagged
+  m_TagString: snow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6619,7 +6629,7 @@ GameObject:
   - component: {fileID: 1809568695}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6635,7 +6645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e045807dd0fee448a505e5be5a431cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  deathUI: {fileID: 0}
+  winUI: {fileID: 0}
   canMove: 1
 --- !u!4 &1809568696
 Transform:
@@ -7010,6 +7021,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2088963766
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -45.66815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.0658493
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 86.0269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2092283731 stripped
 Transform:

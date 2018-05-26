@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114198975373968146}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,4 +52,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: grass
+    clip: {fileID: 8300000, guid: 8934a89dc01bb1a4483be97a39070423, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: wood
+    clip: {fileID: 8300000, guid: 74cbfee688f7e8a42bdecb220c6bb03f, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 1.1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: snow
+    clip: {fileID: 8300000, guid: 325036fc0a6cc4b45817782666be4084, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: carpet
+    clip: {fileID: 8300000, guid: d22a1026fe92d4e4498a2c0525edaace, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: concrete
+    clip: {fileID: 8300000, guid: cd2bf56326a033f4ab98b50c0d5c0cce, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: water
+    clip: {fileID: 8300000, guid: bcdc30738d2e8654f8567ab2b1b5de47, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: door
+    clip: {fileID: 8300000, guid: 57dee9803f404544e8ffd07e22464edf, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 2.5
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

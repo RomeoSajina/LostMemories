@@ -12,6 +12,13 @@ TagManager:
   - FixedDoor
   - GameManager
   - AudioManager
+  - lose
+  - win
+  - grass
+  - wood
+  - carpet
+  - snow
+  - concrete
   layers:
   - Default
   - TransparentFX

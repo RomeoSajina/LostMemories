@@ -6,19 +6,21 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
     private GameManager gm;
-    private AudioManager am
+    private AudioManager am;
     private Animator anim;
     private Rigidbody rb;
 
     public CapsuleCollider colliderStanding;
 
-    public float walkingSpeed = 5f;
-    public float runningSpeed;
+    public float walkingSpeed = 3f;
+    public float runningSpeed = 5f;
     public float lookSensitivity = 3f;
 
     public Transform groundCheck;
 
     public Camera camera;
+
+    private string surfaceTag = null;
 
 	void Start () {
         anim = GetComponent<Animator>();
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour {
     private void FixedUpdate () {
         if (gm.canMove) {
             HandleMovement();
+            HandleSound();
         }
         HandleRotation();
     }
@@ -76,10 +79,37 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter (Collision other) {
-        Debug.Log(other.transform.tag);
+        //Debug.Log(other.transform.tag);
 
-        //am.Play(other.transform.tag);
+        if (am.IsSurfaceTag(other.transform.tag)){
+            surfaceTag = other.transform.tag;
+            am.StopAll();
+        }
+
     }
+
+    private void HandleSound(){
+        if (surfaceTag == null) return;
+
+        //Debug.Log(surfaceTag);
+
+        if (anim.GetBool("isRunning")) {
+            am.Play(surfaceTag + AudioManager.FAST_SUFIX);
+            am.Stop(surfaceTag);
+            return;
+
+        } else {
+            am.Stop(surfaceTag + AudioManager.FAST_SUFIX);
+        }
+
+        if (anim.GetBool("isWalking")){
+            am.Play(surfaceTag);
+
+        } else{
+            am.Stop(surfaceTag);
+        }
+    }
+
 
     void HandleAnimatorStates () {
         //Walking animaton

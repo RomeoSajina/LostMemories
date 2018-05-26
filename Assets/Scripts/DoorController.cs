@@ -48,7 +48,9 @@ public class DoorController : MonoBehaviour {
                 animator.SetTrigger("OpenDoor");
 
             doorOpened = !doorOpened;
-        
+
+            AudioManager.instance.Stop("door");
+            AudioManager.instance.Play("door");
         }
 
 	}

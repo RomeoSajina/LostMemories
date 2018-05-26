@@ -8580,6 +8580,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7e715413d0d9ec46af4dca555fd9167, type: 3}
+      propertyPath: m_TagString
+      value: concrete
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: d7e715413d0d9ec46af4dca555fd9167, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: d7e715413d0d9ec46af4dca555fd9167, type: 3}
@@ -13726,8 +13730,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410145122}
-  m_LocalRotation: {x: -0.0038701883, y: 0.9784171, z: 0.20579208, w: 0.0182962}
-  m_LocalPosition: {x: 12.642303, y: -719.2535, z: 1202.9282}
+  m_LocalRotation: {x: -0.505619, y: -0.1876694, z: -0.11375192, w: 0.83438015}
+  m_LocalPosition: {x: 144.26599, y: -533.83716, z: 40.485443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -13823,6 +13827,14 @@ Prefab:
     - target: {fileID: 400000, guid: b4ecd30ae856e3848949a7ced0481000, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b4ecd30ae856e3848949a7ced0481000, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b4ecd30ae856e3848949a7ced0481000, type: 3}
+      propertyPath: m_TagString
+      value: wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4ecd30ae856e3848949a7ced0481000, type: 3}
@@ -14218,6 +14230,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100.9, y: 0.2, z: 100.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &457402400
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -45.66815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.0658493
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 86.0269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &457903957 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5d4cffe5f1249a046b3bc42bbd99dc47, type: 2}
@@ -15661,7 +15715,7 @@ GameObject:
   - component: {fileID: 723046674}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22431,8 +22485,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: -0.0038701883, y: 0.9784171, z: 0.20579208, w: 0.0182962}
-  m_LocalPosition: {x: 57.812073, y: -160.07361, z: -4.730835}
+  m_LocalRotation: {x: -0.12556762, y: 0.8638763, z: 0.26467496, w: 0.40975338}
+  m_LocalPosition: {x: 5.518097, y: -593.5937, z: 1224.0494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -30351,6 +30405,22 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 24.81
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544816461f324e56a39767fdeb5b114, type: 2}
   m_IsPrefabParent: 0
@@ -30811,7 +30881,7 @@ GameObject:
   - component: {fileID: 1954471190}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30827,7 +30897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e045807dd0fee448a505e5be5a431cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 114582437570017326, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
   deathUI: {fileID: 2120441152}
   winUI: {fileID: 676823760}
   canMove: 1
@@ -35675,6 +35744,16 @@ Prefab:
         type: 2}
       propertyPath: startingTime
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956174936646266, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: walkingSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956174936646266, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: runningSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114226278755396808, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
