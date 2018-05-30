@@ -40,7 +40,8 @@ public class Player : MonoBehaviour {
             HandleMovement();
             HandleSound();
         }
-        HandleRotation();
+        if(gm.canMouseLook)
+            HandleRotation();
     }
 
     void HandleMovement () {

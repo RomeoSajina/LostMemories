@@ -9,7 +9,13 @@ public class GameManager : MonoBehaviour {
     public GameObject deathUI;
     public GameObject winUI;
 
+    public GameObject Cam1;
+    public GameObject Cam2;
+    public GameObject Cam3;
+    public GameObject Cinematic;
+
     public bool canMove = true;
+    public bool canMouseLook = true;
 
     public void HandleDeath () {
         //deathUI = GameObject.FindGameObjectWithTag("lose");
@@ -29,5 +35,27 @@ public class GameManager : MonoBehaviour {
 
     public void ToggleMovement () {
         canMove = !canMove;
+    }
+
+    public void ToggleMouse(){
+        canMouseLook = !canMouseLook;
+    }
+
+    public void CinematicShot1() {
+        Cam2.SetActive(true);
+        Cam1.SetActive(false);
+    }
+
+    public void CinematicShot2(){
+        Cam3.SetActive(true);
+        Cam2.SetActive(false);
+    }
+
+    public void CinematicShot3(){
+        Cam3.SetActive(false);
+    }
+
+    public void CinematicUI(){
+        Cinematic.SetActive(false);
     }
 }
