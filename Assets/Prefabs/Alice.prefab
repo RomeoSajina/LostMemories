@@ -4100,9 +4100,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194864630892856}
-  m_LocalRotation: {x: -0, y: -0.047640964, z: -0, w: 0.9988646}
-  m_LocalPosition: {x: 39.023205, y: -0.119999886, z: -32.348618}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalRotation: {x: -0, y: -0.99994195, z: -0, w: 0.010777926}
+  m_LocalPosition: {x: 22.102577, y: 3.98, z: -7.884999}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4269708875635666}
   - {fileID: 4115678452373228}
@@ -4117,7 +4117,7 @@ Transform:
   - {fileID: 4301342072581320}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -5.4610004, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -178.76501, z: 0}
 --- !u!4 &4037905911191434
 Transform:
   m_ObjectHideFlags: 1
@@ -7917,7 +7917,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 85a638439e437b640b28d7616bad1102, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -7968,8 +7968,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderStanding: {fileID: 136454147609103954}
-  speed: 5
-  lookSensitivity: 3
+  walkingSpeed: 2
+  runningSpeed: 2
+  lookSensitivity: 2
+  groundCheck: {fileID: 0}
   camera: {fileID: 20424114627049174}
 --- !u!114 &114985531121135914
 MonoBehaviour:

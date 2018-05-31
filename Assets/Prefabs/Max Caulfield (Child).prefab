@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 136742641927620934}
   - component: {fileID: 114582437570017326}
   - component: {fileID: 195522797383438132}
+  - component: {fileID: 114487688613007476}
   m_Layer: 0
   m_Name: Max Caulfield (Child)
   m_TagString: Enemy
@@ -1991,8 +1992,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1206735032774508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 337.1021, y: 117.59285, z: 786.29236}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -19.1, y: 0, z: -25.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4923280614267700}
   - {fileID: 4726299908494422}
@@ -2951,6 +2952,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114487688613007476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206735032774508}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f18f4fcb6cf0b448afb32d823ceb1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114582437570017326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2962,7 +2974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a1e4ec12611f940b4637fad4f38c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
+  gm: {fileID: 0}
   enemyPathPreAlert:
   - {fileID: 0}
   - {fileID: 0}
@@ -2977,8 +2989,7 @@ MonoBehaviour:
   - {fileID: 0}
   agent: {fileID: 195522797383438132}
   raycastStart: {fileID: 4923280614267700}
-  raycastTarget: {fileID: 4033968561577980, guid: 7371f33ea53b2e94188cf1622ee103f3,
-    type: 2}
+  raycastTarget: {fileID: 0}
   viewDistance: 50
 --- !u!136 &136742641927620934
 CapsuleCollider:
