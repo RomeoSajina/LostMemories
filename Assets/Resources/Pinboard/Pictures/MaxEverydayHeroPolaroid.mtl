@@ -1,0 +1,4 @@
+newmtl Model001_Material001
+map_Kd TX_Papers_PolaroidTorn01A_D.tga
+map_bump bumpmap_flat.png
+
