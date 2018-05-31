@@ -43,7 +43,8 @@ public class PhotoMode : MonoBehaviour {
 
     private void OnGUI() {
         if (shot){
-            GUI.DrawTexture(new Rect(10, 10, 60, 40), screenCap, ScaleMode.StretchToFill);
+            GUI.DrawTexture(new Rect(10, 10, 1200, 670), screenCap, ScaleMode.StretchToFill);
+            
         }
     }
 
@@ -126,5 +127,9 @@ public class PhotoMode : MonoBehaviour {
         File.WriteAllBytes(Application.dataPath + "/SavedScreen.png", bytes);
 
         shot = true;
+        Time.timeScale = .0000001f;
+        yield return new WaitForSeconds(2*Time.timeScale);
+        shot = false;
+        Time.timeScale = 1;
     }
 }
