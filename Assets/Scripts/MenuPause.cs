@@ -60,7 +60,7 @@ public class MenuPause : MonoBehaviour {
 
     public void NextLevel(){
         int index = scene.buildIndex + 1;
-        gm.ToggleMovement();
+        //gm.ToggleMovement();
 
         PlayerPrefs.SetInt("levelReached", scene.buildIndex);
 

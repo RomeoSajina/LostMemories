@@ -4097,6 +4097,77 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177990103406436, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968596045570792, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798684578643008, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730331754960456, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937325141702650, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937325141702650, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_Text
+      value: SKIP
+      objectReference: {fileID: 0}
+    - target: {fileID: 224876956524482818, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.30853024
+      objectReference: {fileID: 0}
+    - target: {fileID: 224876956524482818, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.30853024
+      objectReference: {fileID: 0}
+    - target: {fileID: 224876956524482818, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.30853024
+      objectReference: {fileID: 0}
+    - target: {fileID: 224876956524482818, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 312
+      objectReference: {fileID: 0}
+    - target: {fileID: 224876956524482818, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -198
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581111408776504, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7658578
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581111408776504, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7658578
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581111408776504, guid: 8a4518e061ed0ce409db550177fd829d,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7658578
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
   m_IsPrefabParent: 0
@@ -4111,6 +4182,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 395930695}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!224 &395930698 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224348648588647294, guid: 8a4518e061ed0ce409db550177fd829d,
+    type: 2}
+  m_PrefabInternal: {fileID: 395930695}
 --- !u!1 &397036853
 GameObject:
   m_ObjectHideFlags: 0
@@ -18524,6 +18600,83 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8088cc0ca1f49f645802eeca8f4c1615, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1746096520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1746096521}
+  - component: {fileID: 1746096523}
+  - component: {fileID: 1746096522}
+  m_Layer: 9
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1746096521
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746096520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.28337002, y: 0.28336996, z: 0.28336996}
+  m_Children: []
+  m_Father: {fileID: 395930698}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1746096522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746096520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "For you taking a photo is an instant.\n\nYou need a half-second to get
+    the the right shot\nand capture people when they are themselves.\r\n\nYou won
+    quite a few competitions\nbut you also spent a lot of time in school detention\nbecause
+    of your miss behaviour.\r\n\nNow you need to escape!\r\n"
+--- !u!222 &1746096523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746096520}
 --- !u!1001 &1749309894
 Prefab:
   m_ObjectHideFlags: 0
