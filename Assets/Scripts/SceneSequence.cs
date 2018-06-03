@@ -15,7 +15,7 @@ public class SceneSequence : MonoBehaviour {
         gm.ToggleMouse();
         gm.ToggleMovement();
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         gm.CinematicShot1();
 
         yield return new WaitForSeconds(5);
@@ -24,7 +24,7 @@ public class SceneSequence : MonoBehaviour {
         yield return new WaitForSeconds(5);
         gm.CinematicShot3();
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(5);
         gm.CinematicUI();
 
         gm.ToggleMovement();
