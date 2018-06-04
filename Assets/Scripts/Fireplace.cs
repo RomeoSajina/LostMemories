@@ -9,7 +9,11 @@ public class Fireplace : MonoBehaviour {
 
     private void OnTriggerStay (Collider other) {
         if (other.CompareTag("Player") && Input.GetKeyDown("e")) {
-            Debug.Log("Vatra ugasena/upaljena");
+
+            //Debug.Log("Vatra ugasena/upaljena");
+
+            AudioManager.instance.Play("blow");
+
             fire.SetActive(false);
 
             StartCoroutine(enemyMother.StartAlert(2));

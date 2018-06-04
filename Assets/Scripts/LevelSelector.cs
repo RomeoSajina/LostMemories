@@ -9,7 +9,8 @@ public class LevelSelector : MonoBehaviour {
 
     private void Start(){
 
-        int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+        //int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+        int levelReached = GameManager.instance.GetCurrentLevel();
 
         for (int i = 0; i < levelButtons.Length; i++){
             if (i + 1 > levelReached)

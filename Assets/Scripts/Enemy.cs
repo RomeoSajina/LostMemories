@@ -28,6 +28,10 @@ public class Enemy : MonoBehaviour {
         anim = GetComponent<Animator>();
 
         enemyPath = enemyPathPreAlert;
+
+        agent = GetComponent<NavMeshAgent>();
+
+        gm = GameManager.instance;
     }
 
     void Update () {
@@ -79,9 +83,9 @@ public class Enemy : MonoBehaviour {
         RaycastHit hit;
 
         if (Physics.Raycast(raycastStart.position, raycastTarget.position - transform.position, out hit, viewDistance)) {
-            Debug.Log(hit.transform.tag);
+            //Debug.Log(hit.transform.tag);
             if (hit.transform.tag == "Player") {
-                Debug.Log("Player");
+                //Debug.Log("Player");
                 Time.timeScale = 0;
                 gm.HandleDeath();
             }

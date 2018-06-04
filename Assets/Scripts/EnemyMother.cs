@@ -17,6 +17,8 @@ public class EnemyMother : MonoBehaviour {
     void Start(){
         anim = GetComponent<Animator>();
         anim.SetBool("isStanding", true);
+
+        gm = GameManager.instance;
     }
 
     private void Update () {

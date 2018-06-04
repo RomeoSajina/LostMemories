@@ -17,13 +17,19 @@ public class GameManager : MonoBehaviour {
     public bool canMove = true;
     public bool canMouseLook = true;
 
+    public static GameManager instance;
+
+    void Awake() { instance = this; }
+
     public void HandleDeath () {
         //deathUI = GameObject.FindGameObjectWithTag("lose");
+        AudioManager.instance.StopAll();
         deathUI.SetActive(true);
     }
 
     public void HandleWin () {
         //winUI = GameObject.FindGameObjectWithTag("win");
+        AudioManager.instance.StopAll();
         winUI.SetActive(true);
         Time.timeScale = 0;
     }
@@ -39,6 +45,10 @@ public class GameManager : MonoBehaviour {
 
     public void ToggleMouse(){
         canMouseLook = !canMouseLook;
+    }
+
+    public int GetCurrentLevel() {
+        return PlayerPrefs.GetInt("levelReached", 1); 
     }
 
     public void CinematicShot1() {

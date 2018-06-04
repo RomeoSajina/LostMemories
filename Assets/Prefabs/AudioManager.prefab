@@ -152,3 +152,103 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: blow
+    clip: {fileID: 8300000, guid: eac00131e1fd5a9408840429656babb1, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  narratorSounds:
+  - name: green_forest_intro_full
+    clip: {fileID: 8300000, guid: 34e45bbc7428d0c4dbec67fe62c4ca1b, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cabin
+    clip: {fileID: 8300000, guid: 8de828e285a0d0c46afec284d5735dc1, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: steps
+    clip: {fileID: 8300000, guid: 53a5245176308f14182a752db95e6f25, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: green_forest_intro_1
+    clip: {fileID: 8300000, guid: 0ec4ee38651c2424ab461b33b6376e73, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: green_forest_intro_2
+    clip: {fileID: 8300000, guid: 3c3457230c495e745b4ac31952f3e08b, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: green_forest_intro_3
+    clip: {fileID: 8300000, guid: 7e0ba43aba5961c4dbf174ce23ea6b74, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: green_forest_intro_4
+    clip: {fileID: 8300000, guid: 3b2b5a18dfa65a140b50da3b4aa058b5, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fireplace
+    clip: {fileID: 8300000, guid: c3a65998f4dd9b0449dcef7a060d9398, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: photography_contest
+    clip: {fileID: 8300000, guid: a8bfedba3d1d63d4299185b89d65ee8c, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fairy_tale
+    clip: {fileID: 8300000, guid: e38c9a69fd380d843ae71b8d09eb9371, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

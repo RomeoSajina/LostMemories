@@ -3117,7 +3117,7 @@ Prefab:
     - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
         type: 2}
       propertyPath: hint
-      value: I used to love sitting by the fireplace
+      value: You used to love sitting by the fireplace
       objectReference: {fileID: 0}
     - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
         type: 2}
@@ -3133,6 +3133,11 @@ Prefab:
         type: 2}
       propertyPath: m_Center.y
       value: 0.21333605
+      objectReference: {fileID: 0}
+    - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
+        type: 2}
+      propertyPath: narratorSoundName
+      value: fireplace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bb6295d8f271a45873f75c276dc79b, type: 2}

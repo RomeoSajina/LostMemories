@@ -8297,6 +8297,11 @@ Prefab:
       propertyPath: hintText
       value: 
       objectReference: {fileID: 1807958733}
+    - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
+        type: 2}
+      propertyPath: narratorSoundName
+      value: steps
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bb6295d8f271a45873f75c276dc79b, type: 2}
   m_IsPrefabParent: 0
@@ -14202,8 +14207,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410145122}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
-  m_LocalPosition: {x: 13.5312195, y: 18.980583, z: 652.8257}
+  m_LocalRotation: {x: -0, y: 0.0014748079, z: -0, w: 0.9999989}
+  m_LocalPosition: {x: 85.07214, y: 49.780586, z: 424.3093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -15453,6 +15458,11 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
+    - target: {fileID: 114956174936646266, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: runningSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_IsPrefabParent: 0
@@ -16579,6 +16589,18 @@ Prefab:
       propertyPath: raycastTarget
       value: 
       objectReference: {fileID: 1000860987}
+    - target: {fileID: 4385787424020652, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385787424020652, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385787424020652, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9bf8fa2765dcf4188c600e5492ac2e, type: 2}
   m_IsPrefabParent: 0
@@ -20954,6 +20976,11 @@ Prefab:
       propertyPath: hint
       value: The cabin was your favourite place to hide
       objectReference: {fileID: 0}
+    - target: {fileID: 114299312081807802, guid: 40bb6295d8f271a45873f75c276dc79b,
+        type: 2}
+      propertyPath: narratorSoundName
+      value: cabin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bb6295d8f271a45873f75c276dc79b, type: 2}
   m_IsPrefabParent: 0
@@ -23870,8 +23897,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
-  m_LocalPosition: {x: -86.96878, y: 103.25507, z: 126.12671}
+  m_LocalRotation: {x: 0.016790655, y: 0.9092151, z: 0.036843732, w: -0.41435316}
+  m_LocalPosition: {x: 113.100006, y: 55.895073, z: 159.4238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
