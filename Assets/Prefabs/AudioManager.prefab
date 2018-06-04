@@ -116,3 +116,39 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: photo
+    clip: {fileID: 8300000, guid: 235ed8eb6626a4345862369f6ad76bae, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: branch_break
+    clip: {fileID: 8300000, guid: 7ce450d785d2bbd4aaa668f7485dffaa, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: pickup
+    clip: {fileID: 8300000, guid: 1f01701823c7abe4ab9fd057aba3a4bc, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: heart_beat
+    clip: {fileID: 8300000, guid: fb53235668368e044a23b53b291cd926, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

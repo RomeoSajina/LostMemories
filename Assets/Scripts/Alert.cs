@@ -10,6 +10,8 @@ public class Alert : MonoBehaviour {
         if (other.CompareTag("Player")) {
             Debug.Log("Alert");
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            gm.Alert(transform);
+            AudioManager.instance.Play("branch_break");
         }
     }
 }

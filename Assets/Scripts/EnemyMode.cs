@@ -19,8 +19,14 @@ public class EnemyMode : MonoBehaviour {
     }
 
     void HandleTransitionToPlayer () {
-        playerCamera.enabled = true;
-        enemyCamera.enabled = false;
+
+        if (!playerCamera.enabled) {
+
+            playerCamera.enabled = true;
+            enemyCamera.enabled = false;
+            AudioManager.instance.StopAll();
+
+        }
     }
 
     private void OnTriggerEnter (Collider other) {
@@ -29,6 +35,7 @@ public class EnemyMode : MonoBehaviour {
 
             playerCamera.enabled = false;
             enemyCamera.enabled = true;
+            AudioManager.instance.StopAll();
         }
     }
 }

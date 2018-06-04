@@ -16,6 +16,7 @@ public class CollectorController : MonoBehaviour {
         if (!isCollected && other.tag.Equals("Player")){
             Destroy(gameObject);
             isCollected = true;
+            AudioManager.instance.Play("pickup");
         }
 
     }

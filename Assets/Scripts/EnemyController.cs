@@ -7,7 +7,9 @@ public class EnemyController : MonoBehaviour {
     private Animator anim;
     private Rigidbody rb;
 
-    private Transform startingPosition;
+    //private Transform startingPosition;
+    private Vector3 startingPosition;
+    private Quaternion startingRotation;
 
     public GameManager gm;
 
@@ -17,7 +19,9 @@ public class EnemyController : MonoBehaviour {
     public Camera camera;
 
     private void Awake () {
-        startingPosition = transform;   
+        //startingPosition = transform;
+        startingPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        startingRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
     }
 
     private void Start () {
@@ -40,11 +44,14 @@ public class EnemyController : MonoBehaviour {
         if (!gm.canMove) {
             HandleMovement();
             HandleRotation();
+            AudioManager.instance.Play("heart_beat");
         }
     }
 
     public void MoveToStaringPosition () {
-        this.transform.position = startingPosition.position;
+        //this.transform.position = startingPosition.position;
+        transform.position = startingPosition;
+        transform.rotation = startingRotation;
 
         gm.canMove = true;
     }

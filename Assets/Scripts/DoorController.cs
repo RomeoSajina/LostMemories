@@ -40,19 +40,22 @@ public class DoorController : MonoBehaviour {
     void Update () {
 
         if (playerInRange && Input.GetKeyDown(KeyCode.E) && !tag.Equals("FixedDoor")){
-
-            if (doorOpened)
-                animator.SetTrigger("CloseDoor");
-
-            else
-                animator.SetTrigger("OpenDoor");
-
-            doorOpened = !doorOpened;
-
-            AudioManager.instance.Stop("door");
-            AudioManager.instance.Play("door");
+            HandleDoorInteraction();
         }
 
 	}
-    
+
+    public void HandleDoorInteraction() {
+        if (doorOpened)
+            animator.SetTrigger("CloseDoor");
+
+        else
+            animator.SetTrigger("OpenDoor");
+
+        doorOpened = !doorOpened;
+
+        AudioManager.instance.Stop("door");
+        AudioManager.instance.Play("door");
+    }
+
 }

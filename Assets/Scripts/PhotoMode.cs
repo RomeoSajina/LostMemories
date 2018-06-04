@@ -58,6 +58,7 @@ public class PhotoMode : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && isPhotoModeActive){
             StartCoroutine(Capture());
             HandleDetection();
+            AudioManager.instance.Play("photo");
         }
 
         if (Input.GetMouseButtonDown(1) && isPhotoModeActive){
