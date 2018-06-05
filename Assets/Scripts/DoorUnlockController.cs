@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorUnlockController : MonoBehaviour {
-
-    //bool playerInRange = false;
-
+    
     private DoorController doorController;
     private EnemyController enemyController = null;
 
@@ -18,7 +16,6 @@ public class DoorUnlockController : MonoBehaviour {
 
         if (collider.tag.Equals("Enemy")){
             enemyController = collider.GetComponent<EnemyController>();
-            //playerInRange = true;
         }
     }
 
@@ -26,8 +23,6 @@ public class DoorUnlockController : MonoBehaviour {
 
         if (collider.tag.Equals("Enemy")) {
             enemyController = null;
-            //playerInRange = false;
-
         }
     }
 
@@ -38,7 +33,7 @@ public class DoorUnlockController : MonoBehaviour {
         if (enemyController != null && Input.GetKeyDown(KeyCode.E) && tag.Equals("FixedDoor")) {
             tag = "Untagged";
 
-            //TODO: emit event za prebacivanje na drugog lika
+            AudioManager.instance.StopAll();
             doorController.HandleDoorInteraction();
             enemyController.MoveToStaringPosition();
         }
