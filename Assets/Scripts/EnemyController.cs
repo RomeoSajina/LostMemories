@@ -16,10 +16,9 @@ public class EnemyController : MonoBehaviour {
     public float walkingSpeed = 3f;
     public float lookSensitivity = 3f;
 
-    public Camera camera;
+    public Camera enemyCamera;
 
     private void Awake () {
-        //startingPosition = transform;
         startingPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         startingRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
     }
@@ -49,7 +48,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void MoveToStaringPosition () {
-        //this.transform.position = startingPosition.position;
         transform.position = startingPosition;
         transform.rotation = startingRotation;
 
@@ -84,6 +82,6 @@ public class EnemyController : MonoBehaviour {
         Vector3 cameraRotation = new Vector3(-xRot, 0f, 0f) * lookSensitivity;
 
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
-        camera.transform.Rotate(-cameraRotation);
+        enemyCamera.transform.Rotate(-cameraRotation);
     }
 }

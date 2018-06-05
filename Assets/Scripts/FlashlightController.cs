@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class FlashlightController : MonoBehaviour {
 
-    private Light light;
+    private Light flashLight;
     public CollectorController collectorController;
 
 	// Use this for initialization
 	void Start () {
-        light = GetComponent<Light>();
-        light.enabled = false;
+        flashLight = GetComponent<Light>();
+        flashLight.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKeyDown(KeyCode.L) && collectorController.isCollected)
-            light.enabled = !light.enabled;
+            flashLight.enabled = !flashLight.enabled;
 	}
 }

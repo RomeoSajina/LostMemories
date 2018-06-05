@@ -82,10 +82,11 @@ public class Enemy : MonoBehaviour {
 
         RaycastHit hit;
 
+        Vector3 targetDir = raycastTarget.position - transform.position;
+        float angle = Vector3.Angle(targetDir, transform.forward);
+
         if (Physics.Raycast(raycastStart.position, raycastTarget.position - transform.position, out hit, viewDistance)) {
-            //Debug.Log(hit.transform.tag);
-            if (hit.transform.tag == "Player") {
-                //Debug.Log("Player");
+            if (hit.transform.tag == "Player" && angle < 70) {
                 Time.timeScale = 0;
                 gm.HandleDeath();
             }

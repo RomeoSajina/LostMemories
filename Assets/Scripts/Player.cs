@@ -16,9 +16,7 @@ public class Player : MonoBehaviour {
     public float runningSpeed = 5f;
     public float lookSensitivity = 3f;
 
-    public Transform groundCheck;
-
-    public Camera camera;
+    public Camera playerCamera;
 
     private string surfaceTag = null;
 
@@ -76,7 +74,7 @@ public class Player : MonoBehaviour {
         Vector3 cameraRotation = new Vector3(xRot, 0f, 0f) * lookSensitivity;
 
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
-        camera.transform.Rotate(-cameraRotation);
+        playerCamera.transform.Rotate(-cameraRotation);
     }
 
     private void OnCollisionEnter (Collision other) {
@@ -138,7 +136,7 @@ public class Player : MonoBehaviour {
         if (Input.GetKey("c") || Input.GetKey("left ctrl")) {
             anim.SetBool("isCrouching", true);
             Vector3 vector = new Vector3(0, 90, 15);
-            camera.transform.localPosition = vector;
+            playerCamera.transform.localPosition = vector;
 
             Vector3 centerC = new Vector3(.6f, 42, -2);
 
@@ -147,7 +145,7 @@ public class Player : MonoBehaviour {
         } else {
             anim.SetBool("isCrouching", false);
             Vector3 vector = new Vector3(0, 150, 15);
-            camera.transform.localPosition = vector;
+            playerCamera.transform.localPosition = vector;
 
             Vector3 centerS = new Vector3(.6f, 82, -2);
 

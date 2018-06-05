@@ -11069,7 +11069,7 @@ MonoBehaviour:
   runningSpeed: 8
   lookSensitivity: 2
   groundCheck: {fileID: 0}
-  camera: {fileID: 182915794}
+  playerCamera: {fileID: 182915794}
 --- !u!54 &1081913774
 Rigidbody:
   m_ObjectHideFlags: 0

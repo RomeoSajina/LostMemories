@@ -52,6 +52,10 @@ public class PhotoMode : MonoBehaviour {
         if (Input.GetKeyDown("f")) {
             StartCoroutine(FadeIn());
             gm.ToggleMovement();
+            
+            if(isPhotoModeActive){
+                isZoomed = false;
+            }
             isPhotoModeActive = !isPhotoModeActive;
         }
 
@@ -93,10 +97,17 @@ public class PhotoMode : MonoBehaviour {
             camX = transform.position.x;
             camZ = transform.position.z; 
 
-            if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
-                Debug.Log("Uslikano!");
-                gm.HandleWin();
-            }
+            if(photoPoint == null) {
+                if (hit.transform.tag == "Enemy"){
+                    Debug.Log("Uslikano!");
+                    gm.HandleWin();
+                }
+            } else {
+                if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
+                    Debug.Log("Uslikano!");
+                    gm.HandleWin();
+                }
+            } 
         }
     }
 
