@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour {
 
     public Camera enemyCamera;
 
+    private bool finished = false;
+
     private void Awake () {
         startingPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         startingRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
@@ -32,15 +34,17 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Update () {
-        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) {
+        
+        if(!finished && !gm.canMove && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) {
             anim.SetBool("isStanding", false);
         } else {
             anim.SetBool("isStanding", true);
         }
+        
     }
 
     private void FixedUpdate () {
-        if (!gm.canMove) {
+        if (!finished && !gm.canMove) {
             HandleMovement();
             HandleRotation();
             AudioManager.instance.Play("heart_beat");
@@ -52,6 +56,7 @@ public class EnemyController : MonoBehaviour {
         transform.rotation = startingRotation;
 
         gm.canMove = true;
+        finished = true;
     }
 
     void HandleMovement () {
