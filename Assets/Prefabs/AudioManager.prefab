@@ -252,3 +252,30 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: fantasy_room_intro
+    clip: {fileID: 8300000, guid: 3a9410ced9cd72e47801e791c0ac178a, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fallen_school_intro
+    clip: {fileID: 8300000, guid: 45970a0589bd3c2489b303971be31962, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cold_snow_intro
+    clip: {fileID: 8300000, guid: 6e33fb7b6574eae429f7f9f4aad7b0a2, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

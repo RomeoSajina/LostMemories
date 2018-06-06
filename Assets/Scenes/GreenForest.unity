@@ -14207,8 +14207,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410145122}
-  m_LocalRotation: {x: -0, y: 0.0014748079, z: -0, w: 0.9999989}
-  m_LocalPosition: {x: 85.07214, y: 49.780586, z: 424.3093}
+  m_LocalRotation: {x: -0.113929346, y: -0.1309848, z: 0.015168385, w: -0.9846995}
+  m_LocalPosition: {x: 181.63406, y: -76.70057, z: -347.1439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -15468,6 +15468,11 @@ Prefab:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 895984035}
+    - target: {fileID: 114458161669784388, guid: 7371f33ea53b2e94188cf1622ee103f3,
+        type: 2}
+      propertyPath: startingTime
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7371f33ea53b2e94188cf1622ee103f3, type: 2}
   m_IsPrefabParent: 0
@@ -16190,7 +16195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &641653518
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23918,8 +23923,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: 0.04772684, y: 0.9312325, z: 0.1321819, w: -0.33623835}
-  m_LocalPosition: {x: 107.98956, y: 67.288216, z: 132.73502}
+  m_LocalRotation: {x: 0.016790655, y: 0.9092151, z: 0.036843732, w: -0.41435316}
+  m_LocalPosition: {x: 113.100006, y: 55.895073, z: 159.4238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -31925,7 +31930,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1800424749056084, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1968596045570792, guid: 8a4518e061ed0ce409db550177fd829d, type: 2}
       propertyPath: m_IsActive

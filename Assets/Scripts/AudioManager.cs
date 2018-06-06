@@ -7,8 +7,8 @@ public class AudioManager : MonoBehaviour {
 
     public static readonly string FAST_SUFIX = "_fast";
 
-    private static readonly List<String> surfaces = new List<String>() { "wood", "carpet", "grass", "snow", "concrete"};
-    private static readonly List<String> intros = new List<String>() { "green_forest_intro", "fantasy_room_intro", "fallen_school_intro", "cold_snow_intro" };
+    public static readonly List<String> surfaces = new List<String>() { "wood", "carpet", "grass", "snow", "concrete"};
+    public static readonly List<String> intros = new List<String>() { "green_forest_intro", "fantasy_room_intro", "fallen_school_intro", "cold_snow_intro" };
 
     public static AudioManager instance;
 
@@ -119,11 +119,16 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void StopAll () {
+        StopAll(sounds);
+        StopAll(narratorSounds);
+    }
+
+    private void StopAll(Sound[] sounds) {
         foreach (Sound s in sounds) {
             if (s.source != null)
                 s.source.Stop();
             else
-                Debug.Log("Source of: "+s.name+" not found!");
+                Debug.Log("Source of: " + s.name + " not found!");
         }
     }
 
@@ -167,7 +172,7 @@ public class AudioManager : MonoBehaviour {
     public void PlayIntro(int part) {
         int level = GameManager.instance.GetCurrentLevel();
 
-        string name = intros[level - 1];
+        string name = intros[level];
 
         PlayNarrator(name + "_" + part);
     }

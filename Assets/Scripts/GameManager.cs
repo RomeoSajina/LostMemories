@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
+    private static readonly List<string> scenes = new List<string>() { "GreenForest", "FantasyRoom", "FallenSchool", "ColdSnow" };
+
     void Awake() { instance = this; }
 
     public void HandleDeath () {
@@ -32,11 +35,15 @@ public class GameManager : MonoBehaviour {
         AudioManager.instance.StopAll();
         winUI.SetActive(true);
         Time.timeScale = 0;
+        canMove = false;
+        AudioManager.instance.PlayNarrator(AudioManager.intros[GetCurrentLevel()+1]);
     }
 
     public void Alert (Transform alert) {
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
         enemy.Alert(alert);
+        //Samo za testiranje
+        //HandleWin();
     }
 
     public void ToggleMovement () {
@@ -47,7 +54,19 @@ public class GameManager : MonoBehaviour {
         canMouseLook = !canMouseLook;
     }
 
+    /* Vraća trenutni level - 1 tako da se lakše radi sa array-evima, tj da ne treba uvijek stavljati GetCurrentLevel() - 1 */
     public int GetCurrentLevel() {
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        //Debug.Log("Scene name: " + scene.name);
+        int current = scenes.IndexOf(scene.name);
+
+        return current;
+    }
+
+
+    public int GetReachedLevel() {
         return PlayerPrefs.GetInt("levelReached", 1); 
     }
 
