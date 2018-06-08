@@ -67,4 +67,8 @@ public class MenuPause : MonoBehaviour {
         SceneManager.LoadScene(index);
     }
 
+    public void SkipStory(){
+        int index = scene.buildIndex + 1;
+        SceneManager.LoadScene(index);
+    }
 }
