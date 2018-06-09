@@ -53,6 +53,7 @@ public class MenuPause : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    // Pozivanje na kraju levela
     public void NextLevel(){
         int index = SceneManager.GetActiveScene().buildIndex;
 
@@ -63,6 +64,7 @@ public class MenuPause : MonoBehaviour {
         SceneManager.LoadScene(5);
     }
 
+    // Pozivanje na Story levelu
     public void SkipStory(){
         SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1));
     }

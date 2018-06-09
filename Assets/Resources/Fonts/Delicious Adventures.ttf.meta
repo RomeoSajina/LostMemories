@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ceef7beeab082764ab0bbd7a2e5fc7f5
+timeCreated: 1528544625
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Delicious Adventures
+  fontNames:
+  - Delicious Adventures
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
