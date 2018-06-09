@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour {
 
-    private Scene scene;
     private GameManager gm;
 
     public static bool GameIsPaused = false;
@@ -14,7 +13,6 @@ public class MenuPause : MonoBehaviour {
 
     void Start() {
         Time.timeScale = 1f;
-        scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -36,15 +34,12 @@ public class MenuPause : MonoBehaviour {
 
     void Pause(){
         pauseMenuUI.SetActive(true);
-        //Freez time; Slow motion
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
     public void LoadMenu() {
-        //Debug.Log("Loading menu...");
         Time.timeScale = 1f;
-        //TODO: Dodati sceneIndex umjesto hard-kodiranja.
         SceneManager.LoadScene("IdleScene");
     }
 
@@ -53,24 +48,22 @@ public class MenuPause : MonoBehaviour {
         Application.Quit();
     }
 
-    public void  Restart() {
-        SceneManager.LoadScene(scene.name);
+    public void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
 
     public void NextLevel(){
-        int index = scene.buildIndex + 1;
-        //gm.ToggleMovement();
+        int index = SceneManager.GetActiveScene().buildIndex;
 
         AudioManager.instance.StopAll(true);
 
-        PlayerPrefs.SetInt("levelReached", scene.buildIndex);
+        PlayerPrefs.SetInt("levelReached", index);
 
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(5);
     }
 
     public void SkipStory(){
-        int index = scene.buildIndex + 1;
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1));
     }
 }
