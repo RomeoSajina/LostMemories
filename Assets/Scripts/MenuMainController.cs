@@ -16,7 +16,15 @@ public class MenuMainController : MonoBehaviour {
 		am.Play("MenuCameraToTutorial");
 	}
 
-	public void MainMenu() {
+	public void Levels() {
+		am.Play("MenuCameraToLevels");
+	}
+
+	public void MainMenuT() {
 		am.Play("MenuCameraFromTutorial");
+	}
+
+	public void MainMenuL() {
+		am.Play("MenuCameraFromLevels");
 	}
 }
