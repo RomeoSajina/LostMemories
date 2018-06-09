@@ -118,10 +118,12 @@ public class AudioManager : MonoBehaviour {
         s.source.Stop();
     }
 
-    public void StopAll () {
+    public void StopAll (bool includeNarrator = false) {
         StopAll(sounds);
-        StopAll(narratorSounds);
+        if(includeNarrator)
+            StopAll(narratorSounds);
     }
+
 
     private void StopAll(Sound[] sounds) {
         foreach (Sound s in sounds) {

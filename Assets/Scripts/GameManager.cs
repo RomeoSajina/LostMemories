@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
         //winUI = GameObject.FindGameObjectWithTag("win");
         AudioManager.instance.StopAll();
         winUI.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         canMove = false;
         AudioManager.instance.PlayNarrator(AudioManager.intros[GetCurrentLevel()+1]);
     }
@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour {
 
         return current;
     }
-
 
     public int GetReachedLevel() {
         return PlayerPrefs.GetInt("levelReached", 1); 

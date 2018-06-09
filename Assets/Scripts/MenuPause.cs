@@ -62,6 +62,8 @@ public class MenuPause : MonoBehaviour {
         int index = scene.buildIndex + 1;
         //gm.ToggleMovement();
 
+        AudioManager.instance.StopAll(true);
+
         PlayerPrefs.SetInt("levelReached", scene.buildIndex);
 
         SceneManager.LoadScene(index);
