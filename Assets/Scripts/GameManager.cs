@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
     private static readonly List<string> scenes = new List<string>() { "GreenForest", "FantasyRoom", "FallenSchool", "ColdSnow" };
+    public static readonly List<string> AllScenes = new List<string>() {"IdleScene", "GreenForest", "FantasyRoom", "FallenSchool", "ColdSnow" };
+    private static readonly string IMAGE_NAME = "/Images/SavedScreen_";
 
     void Awake() { instance = this; }
 
@@ -69,6 +72,18 @@ public class GameManager : MonoBehaviour {
         return PlayerPrefs.GetInt("levelReached", 1); 
     }
 
+    public void SetReachedLevel(int level) {
+        PlayerPrefs.SetInt("levelReached", level);
+    }
+
+    public int GetSelectedLevel() {
+        return PlayerPrefs.GetInt("levelSelected", 0);
+    }
+
+    public void SetSelectedLevel(int level) {
+        PlayerPrefs.SetInt("levelSelected", level);
+    }
+
     public void CinematicShot1() {
         Cam2.SetActive(true);
         Cam1.SetActive(false);
@@ -85,5 +100,29 @@ public class GameManager : MonoBehaviour {
 
     public void CinematicUI(){
         Cinematic.SetActive(false);
+    }
+
+
+    public void SaveImage(byte[] bytes, int level = -1) {
+        if (level == -1)
+            level = GetReachedLevel();
+
+        string path = Application.dataPath + "/Images";
+
+        if (!Directory.Exists(path))
+            Directory.CreateDirectory(path);
+
+        File.WriteAllBytes(Application.dataPath + IMAGE_NAME + level + ".png", bytes);
+    }
+
+    public byte[] ReadImage(int level = -1) {
+        if (level == -1)
+            level = GetReachedLevel();
+
+        return File.ReadAllBytes(Application.dataPath + IMAGE_NAME + level + ".png");
+    }
+
+    public bool ImageExsist(int level) {
+        return File.Exists(Application.dataPath + IMAGE_NAME + level + ".png");
     }
 }

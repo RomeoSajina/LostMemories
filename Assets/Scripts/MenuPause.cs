@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour {
 
-    private GameManager gm;
+    //private GameManager gm;
 
     public static bool GameIsPaused = false;
 
@@ -40,7 +40,8 @@ public class MenuPause : MonoBehaviour {
 
     public void LoadMenu() {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("IdleScene");
+        //SceneManager.LoadScene("IdleScene");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame(){
@@ -55,17 +56,22 @@ public class MenuPause : MonoBehaviour {
 
     // Pozivanje na kraju levela
     public void NextLevel(){
-        int index = SceneManager.GetActiveScene().buildIndex;
+        //int index = SceneManager.GetActiveScene().buildIndex;
 
         AudioManager.instance.StopAll(true);
 
-        PlayerPrefs.SetInt("levelReached", index);
+        int index = GameManager.AllScenes.IndexOf(SceneManager.GetActiveScene().name);
+
+        GameManager.instance.SetReachedLevel(index);
+        GameManager.instance.SetSelectedLevel(index + 1);
+        //PlayerPrefs.SetInt("levelReached", index);
 
         SceneManager.LoadScene(5);
     }
 
     // Pozivanje na Story levelu
     public void SkipStory(){
-        SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1));
+        GameManager.instance.SetSelectedLevel(GameManager.AllScenes.IndexOf(SceneManager.GetActiveScene().name));
+        //SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1));
     }
 }

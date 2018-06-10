@@ -8,6 +8,7 @@ public class PhotoMode : MonoBehaviour {
 
     Texture2D screenCap;
     bool shot = false;
+    bool captured = false;
 
     private GameManager gm;
 
@@ -61,9 +62,10 @@ public class PhotoMode : MonoBehaviour {
             isPhotoModeActive = !isPhotoModeActive;
         }
 
-        if (Input.GetMouseButtonDown(0) && isPhotoModeActive){
-            StartCoroutine(Capture());
+        if (Input.GetMouseButtonDown(0) && isPhotoModeActive && !captured) {
             HandleDetection();
+   
+            StartCoroutine(Capture());
             AudioManager.instance.Play("photo");
         }
 
@@ -102,12 +104,14 @@ public class PhotoMode : MonoBehaviour {
             if(photoPoint == null) {
                 if (hit.transform.tag == "Enemy"){
                     Debug.Log("Uslikano!");
-                    gm.HandleWin();
+                    captured = true;
+                    //gm.HandleWin();
                 }
             } else {
                 if (Mathf.Abs(photoPoint.transform.position.x - camX) < 5 && Mathf.Abs(photoPoint.transform.position.z - camZ) < 5 && hit.transform.tag == "Enemy") {
                     Debug.Log("Uslikano!");
-                    gm.HandleWin();
+                    captured = true;
+                    //gm.HandleWin();
                 }
             } 
         }
@@ -137,13 +141,19 @@ public class PhotoMode : MonoBehaviour {
         screenCap.ReadPixels(new Rect(0f, 0f, Screen.width, Screen.height), 0, 0);
         screenCap.Apply();
 
-        byte[] bytes = screenCap.EncodeToPNG();
-        File.WriteAllBytes(Application.dataPath + "/SavedScreen.png", bytes);
+        if (captured) {
+            byte[] bytes = screenCap.EncodeToPNG();
+            GameManager.instance.SaveImage(bytes);
+            //File.WriteAllBytes(Application.dataPath + "/SavedScreen.png", bytes);
+        }
 
         shot = true;
         Time.timeScale = .0000001f;
         yield return new WaitForSeconds(2*Time.timeScale);
         shot = false;
         Time.timeScale = 1;
+
+        if(captured)
+            gm.HandleWin();
     }
 }

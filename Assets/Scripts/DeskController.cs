@@ -12,11 +12,14 @@ public class DeskController : MonoBehaviour {
 
     public Image batteryLife;
     public GameObject canvas;
+
+    public GameObject planePicture;
     
     void Start() {
 		Time.timeScale = 1;
 
-		sceneIndex = PlayerPrefs.GetInt("levelReached", 1) - 1;
+        sceneIndex = GameManager.instance.GetSelectedLevel();
+        //sceneIndex = PlayerPrefs.GetInt("levelReached", 1) - 1;
 
 		// Postavljanje svega na neaktivno
 		for(int i = 0; i < 3; i++){
@@ -24,9 +27,26 @@ public class DeskController : MonoBehaviour {
 		}
 
 		// Postavljanje oderednih objekata na aktivno
-		for(int i = 0; i < sceneIndexForTesting; i++){
+		for(int i = 0; i < sceneIndex; i++){
 			deskObjects[i].SetActive(true);
 		}
+
+
+        //Prikazi prethodnu sliku
+        //TODO: dodat text + narator
+        int index = sceneIndex - 1;
+
+        if (GameManager.instance.ImageExsist(index)) {
+
+            var bytes = GameManager.instance.ReadImage(index);
+            var tex = new Texture2D(1, 1);
+            tex.LoadImage(bytes);
+
+            Material material = new Material(Shader.Find("Diffuse"));
+            material.mainTexture = tex;
+            planePicture.GetComponent<Renderer>().material = material;
+        }
+
 
     }
 
@@ -35,7 +55,7 @@ public class DeskController : MonoBehaviour {
             
             canvas.SetActive(true);
             //StartCoroutine(LoadLevel(sceneIndexForTesting));
-            StartCoroutine(LoadLevel(PlayerPrefs.GetInt("levelReached", 1) + 1));
+            StartCoroutine(LoadLevel(sceneIndex));
             
             //SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1) + 1);
         }
