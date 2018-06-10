@@ -52,8 +52,10 @@ public class PhotoMode : MonoBehaviour {
         if (Input.GetKeyDown("f")) {
             StartCoroutine(FadeIn());
             gm.ToggleMovement();
-            
-            if(isPhotoModeActive){
+            AudioManager.instance.StopAll();
+
+
+            if (isPhotoModeActive){
                 isZoomed = false;
             }
             isPhotoModeActive = !isPhotoModeActive;
