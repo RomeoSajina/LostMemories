@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour {
         canMouseLook = !canMouseLook;
     }
 
+    //Funkcija za dohvacanje indeska levela (poprima vijrednost 1-4)
     public int GetReachedLevel() {
         return PlayerPrefs.GetInt("levelReached", 1);
     }
