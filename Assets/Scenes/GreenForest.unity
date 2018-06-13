@@ -8190,7 +8190,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.3529412, g: 0, b: 0, a: 0.5882353}
+  m_EffectColor: {r: 0.31764707, g: 0.047058824, b: 0.047058824, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &125807080
@@ -8213,7 +8213,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceef7beeab082764ab0bbd7a2e5fc7f5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -8225,7 +8225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Now you are on a quest to find your lost memories.
+  m_Text: Now you are on a quest to find your lost memories!
 --- !u!222 &125807081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14207,8 +14207,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410145122}
-  m_LocalRotation: {x: 0.07683672, y: 0.88120407, z: 0.1538289, w: -0.44035465}
-  m_LocalPosition: {x: 77.35071, y: 47.99852, z: 409.6368}
+  m_LocalRotation: {x: 0.0062613473, y: -0.3169321, z: 0.0020922823, w: 0.94842523}
+  m_LocalPosition: {x: 152.24814, y: 127.91653, z: -409.76724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -22290,7 +22290,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.3529412, g: 0, b: 0, a: 0.5882353}
+  m_EffectColor: {r: 0.31764707, g: 0.047058824, b: 0.047058824, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1018016118
@@ -22313,7 +22313,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceef7beeab082764ab0bbd7a2e5fc7f5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -23411,7 +23411,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.3529412, g: 0, b: 0, a: 0.5882353}
+  m_EffectColor: {r: 0.31764707, g: 0.047058824, b: 0.047058824, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1177440244
@@ -23434,7 +23434,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceef7beeab082764ab0bbd7a2e5fc7f5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -23446,7 +23446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: He took something precious from you.
+  m_Text: He took something precious from you....
 --- !u!222 &1177440245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23923,8 +23923,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253663605}
-  m_LocalRotation: {x: -0, y: 0.0014748079, z: -0, w: 0.9999989}
-  m_LocalPosition: {x: 85.07214, y: 77.05508, z: 41.316864}
+  m_LocalRotation: {x: 0.0062613473, y: -0.3169321, z: 0.0020922823, w: 0.94842523}
+  m_LocalPosition: {x: 152.24814, y: 155.19101, z: -409.76724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596098599}
@@ -27866,7 +27866,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.3529412, g: 0, b: 0, a: 0.5882353}
+  m_EffectColor: {r: 0.31764707, g: 0.047058824, b: 0.047058824, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1736596675
@@ -27889,7 +27889,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceef7beeab082764ab0bbd7a2e5fc7f5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -27901,7 +27901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Here is where you encountered HappyGuy for the first time.
+  m_Text: Here is where you encountered HappyGuy for the first time....
 --- !u!222 &1736596676
 CanvasRenderer:
   m_ObjectHideFlags: 0
