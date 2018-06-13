@@ -44,7 +44,7 @@ public class PhotoMode : MonoBehaviour {
 
     private void OnGUI() {
         if (shot){
-            GUI.DrawTexture(new Rect(10, 10, Screen.width -20, Screen.height -20), screenCap, ScaleMode.StretchToFill);
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), screenCap, ScaleMode.StretchToFill);
             
         }
     }
