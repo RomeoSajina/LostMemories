@@ -9,7 +9,10 @@ public class ClickableGameObject : MonoBehaviour {
     [Tooltip("Akcija koje će se pozvati kad se klikne button")]
     public Button.ButtonClickedEvent OnClick;// = new Button.ButtonClickedEvent();
 
+    public bool isClickable = true;
+
     private void OnMouseUpAsButton(){
-        OnClick.Invoke();
+        if(isClickable)
+            OnClick.Invoke();
     }
 }

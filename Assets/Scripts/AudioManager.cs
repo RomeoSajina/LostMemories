@@ -172,7 +172,7 @@ public class AudioManager : MonoBehaviour {
 
 
     public void PlayIntro(int part) {
-        int level = GameManager.instance.GetCurrentLevel();
+        int level = PlayerPrefs.GetInt("levelReached", 1);
 
         string name = intros[level];
 

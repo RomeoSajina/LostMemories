@@ -5404,7 +5404,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.7545639, b: 0.5955882, a: 1}
-  m_Intensity: 10
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7660,6 +7660,10 @@ Prefab:
     - target: {fileID: 9500000, guid: 56598347d00eae0448902704860d21fc, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 56598347d00eae0448902704860d21fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56598347d00eae0448902704860d21fc, type: 3}
@@ -12395,7 +12399,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9044118, g: 0.8186486, b: 0.75810987, a: 1}
-  m_Intensity: 2
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -14112,7 +14116,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9044118, g: 0.8186486, b: 0.75810987, a: 1}
-  m_Intensity: 2
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -14632,7 +14636,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.7545639, b: 0.5955882, a: 1}
-  m_Intensity: 10
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -16778,7 +16782,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.41176468, g: 0.6105477, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

@@ -14,32 +14,10 @@ public class MenuMainController : MonoBehaviour {
     void Start() {
 		am = mainCamera.GetComponent<Animator>();
 
-        for(int i=0; i<levels.Length; i++) {
-            
-            if (GameManager.instance.ImageExsist(i + 1)) {
-
-                var bytes = GameManager.instance.ReadImage(i + 1);
-                var tex = new Texture2D(1, 1);
-                tex.LoadImage(bytes);
-
-                Material material = new Material(Shader.Find("Diffuse"));
-
-                material.mainTexture = tex;
-
-                levels[i].GetComponent<Renderer>().material = material;                
-            }
-
-            /*
-            Texture2D texture = Resources.Load("/SavedScreen") as Texture2D;
-
-            Material material = new Material(Shader.Find("Diffuse"));
-
-            material.mainTexture = texture;
-            
-            levels[i].GetComponent<Renderer>().material = material;
-            */
+        for(int i = 3; i >= PlayerPrefs.GetInt("levelReached", 1); i--){
+            levels[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, .1f);
+            levels[i].GetComponent<ClickableGameObject>().isClickable = false;
         }
-  
     }
 
 	public void Tutorial() {
@@ -58,16 +36,25 @@ public class MenuMainController : MonoBehaviour {
 		am.Play("MenuCameraFromLevels");
 	}
 
-    public void StartLevel(int level) {
+    public void SelectLevel(int index){
+        int level = PlayerPrefs.GetInt("levelReached", 1);
 
-        Debug.Log("start level " + level + " current is: " + GameManager.instance.GetReachedLevel());
+        if(index <= level) {
+            StartCoroutine(LoadLevel(index));
+        }
+        
+    }
 
-        //-1 jer sljedeci (ne proden) level mora bit otkjucan
-        if (level - 1 > GameManager.instance.GetReachedLevel()) return;
-       
-        //Pretpostavlja da je prva scena Idle ili Main ili nesto drugo
-        GameManager.instance.SetSelectedLevel(level);
+    private IEnumerator LoadLevel(int level) {
+        AsyncOperation async = SceneManager.LoadSceneAsync(level);
 
-        SceneManager.LoadScene(5);
+        float perc = 0.01f;
+        while (!async.isDone) {
+            yield return null;
+            //perc = Mathf.Lerp(perc, async.progress, 0.1f); ili perc = async.progress;
+            perc = async.progress;
+            //batteryLife.fillAmount = perc;
+        }
+        async.allowSceneActivation = true;
     }
 }

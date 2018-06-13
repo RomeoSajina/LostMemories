@@ -18,8 +18,7 @@ public class DeskController : MonoBehaviour {
     void Start() {
 		Time.timeScale = 1;
 
-        sceneIndex = GameManager.instance.GetSelectedLevel();
-        //sceneIndex = PlayerPrefs.GetInt("levelReached", 1) - 1;
+        sceneIndex = PlayerPrefs.GetInt("levelReached", 1) - 1;
 
 		// Postavljanje svega na neaktivno
 		for(int i = 0; i < 3; i++){
@@ -34,7 +33,7 @@ public class DeskController : MonoBehaviour {
 
         //Prikazi prethodnu sliku
         //TODO: dodat text + narator
-        int index = sceneIndex - 1;
+        int index = sceneIndex;
 
         if (GameManager.instance.ImageExsist(index)) {
 
@@ -55,7 +54,7 @@ public class DeskController : MonoBehaviour {
             
             canvas.SetActive(true);
             //StartCoroutine(LoadLevel(sceneIndexForTesting));
-            StartCoroutine(LoadLevel(sceneIndex));
+            StartCoroutine(LoadLevel(sceneIndex + 1));
             
             //SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1) + 1);
         }

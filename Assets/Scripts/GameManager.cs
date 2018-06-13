@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
         winUI.SetActive(true);
         Time.timeScale = 0f;
         canMove = false;
-        AudioManager.instance.PlayNarrator(AudioManager.intros[GetCurrentLevel()+1]);
+        AudioManager.instance.PlayNarrator(AudioManager.intros[PlayerPrefs.GetInt("levelReached", 1) + 1]);
     }
 
     public void Alert (Transform alert) {
@@ -53,35 +53,12 @@ public class GameManager : MonoBehaviour {
         canMove = !canMove;
     }
 
-    public void ToggleMouse(){
+    public void ToggleMouse() {
         canMouseLook = !canMouseLook;
     }
 
-    /* Vraća trenutni level - 1 tako da se lakše radi sa array-evima, tj da ne treba uvijek stavljati GetCurrentLevel() - 1 */
-    public int GetCurrentLevel() {
-
-        Scene scene = SceneManager.GetActiveScene();
-
-        //Debug.Log("Scene name: " + scene.name);
-        int current = scenes.IndexOf(scene.name);
-
-        return current;
-    }
-
     public int GetReachedLevel() {
-        return PlayerPrefs.GetInt("levelReached", 1); 
-    }
-
-    public void SetReachedLevel(int level) {
-        PlayerPrefs.SetInt("levelReached", level);
-    }
-
-    public int GetSelectedLevel() {
-        return PlayerPrefs.GetInt("levelSelected", 0);
-    }
-
-    public void SetSelectedLevel(int level) {
-        PlayerPrefs.SetInt("levelSelected", level);
+        return PlayerPrefs.GetInt("levelReached", 1);
     }
 
     public void CinematicShot1() {

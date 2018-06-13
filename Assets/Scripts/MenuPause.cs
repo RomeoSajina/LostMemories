@@ -56,22 +56,16 @@ public class MenuPause : MonoBehaviour {
 
     // Pozivanje na kraju levela
     public void NextLevel(){
-        //int index = SceneManager.GetActiveScene().buildIndex;
-
         AudioManager.instance.StopAll(true);
 
-        int index = GameManager.AllScenes.IndexOf(SceneManager.GetActiveScene().name);
-
-        GameManager.instance.SetReachedLevel(index);
-        GameManager.instance.SetSelectedLevel(index + 1);
-        //PlayerPrefs.SetInt("levelReached", index);
+        int index = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("levelReached", index);
 
         SceneManager.LoadScene(5);
     }
 
     // Pozivanje na Story levelu
     public void SkipStory(){
-        GameManager.instance.SetSelectedLevel(GameManager.AllScenes.IndexOf(SceneManager.GetActiveScene().name));
-        //SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1));
+        SceneManager.LoadScene(PlayerPrefs.GetInt("levelReached", 1) + 1);
     }
 }
