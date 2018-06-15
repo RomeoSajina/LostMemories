@@ -18,7 +18,9 @@ public class DeskController : MonoBehaviour {
     void Start() {
 		Time.timeScale = 1;
 
-        sceneIndex = PlayerPrefs.GetInt("levelReached", 1) - 1;
+        sceneIndex = PlayerPrefs.GetInt("levelReached", 1);
+
+        Debug.Log(sceneIndex);
 
 		// Postavljanje svega na neaktivno
 		for(int i = 0; i < 3; i++){
@@ -46,7 +48,7 @@ public class DeskController : MonoBehaviour {
             planePicture.GetComponent<Renderer>().material = material;
         }
 
-
+        StartCoroutine(StartStory());
     }
 
 	void Update() {
@@ -72,6 +74,13 @@ public class DeskController : MonoBehaviour {
         }
         async.allowSceneActivation = true;
     }
-  
+
+
+
+
+    IEnumerator StartStory() {
+        yield return new WaitForSeconds(4);
+        AudioManager.instance.PlayIntro(sceneIndex);
+    }
 
 }

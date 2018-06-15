@@ -1686,7 +1686,7 @@ MonoBehaviour:
   fadeImage: {fileID: 165189698}
   photoPoint: {fileID: 1119619}
   isPhotoModeActive: 0
-  startingTime: 60
+  startingTime: 350
 --- !u!114 &182915791
 MonoBehaviour:
   m_ObjectHideFlags: 0

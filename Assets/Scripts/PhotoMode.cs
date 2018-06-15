@@ -9,6 +9,7 @@ public class PhotoMode : MonoBehaviour {
     Texture2D screenCap;
     bool shot = false;
     bool captured = false;
+    bool batteryDead = false;
 
     private GameManager gm;
 
@@ -90,6 +91,11 @@ public class PhotoMode : MonoBehaviour {
 
         timeLeft -= Time.deltaTime;
         batteryLife.fillAmount = timeLeft / startingTime;
+
+        if (batteryLife.fillAmount <= 0 && !batteryDead) {
+            StartCoroutine(BatteryDead());
+            batteryDead = true;
+        }
     }
 
     void HandleDetection () {   
@@ -156,4 +162,16 @@ public class PhotoMode : MonoBehaviour {
         if(captured)
             gm.HandleWin();
     }
+
+
+    IEnumerator BatteryDead() {
+        AudioManager.instance.Play("low_battery");
+
+        yield return new WaitForSeconds(2);
+        AudioManager.instance.Play("low_battery");
+
+        yield return new WaitForSeconds(10);
+        AudioManager.instance.PlayNarrator("battery");
+    }
+
 }

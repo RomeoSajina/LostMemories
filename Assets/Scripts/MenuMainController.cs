@@ -36,6 +36,10 @@ public class MenuMainController : MonoBehaviour {
 		am.Play("MenuCameraFromLevels");
 	}
 
+    public void Quit(){
+        Application.Quit();
+    }
+    
     public void SelectLevel(int index){
         int level = PlayerPrefs.GetInt("levelReached", 1);
 

@@ -6908,7 +6908,7 @@ MonoBehaviour:
   displacementMap: {fileID: 0}
   intensity: 0.5
   flipIntensity: 0
-  colorIntensity: 2
+  colorIntensity: 0.8
 --- !u!1 &1566421622
 GameObject:
   m_ObjectHideFlags: 0

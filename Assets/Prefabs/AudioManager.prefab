@@ -161,8 +161,17 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: low_battery
+    clip: {fileID: 8300000, guid: 10181bb1ddb9fba4193d69b5bc743f90, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   narratorSounds:
-  - name: green_forest_intro_full
+  - name: green_forest_intro
     clip: {fileID: 8300000, guid: 34e45bbc7428d0c4dbec67fe62c4ca1b, type: 3}
     volume: 1
     volumeVariance: 1
@@ -272,6 +281,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: cold_snow_intro
     clip: {fileID: 8300000, guid: 6e33fb7b6574eae429f7f9f4aad7b0a2, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: battery
+    clip: {fileID: 8300000, guid: 5d36f28d6b389854f9b3924650a8d317, type: 3}
     volume: 1
     volumeVariance: 1
     pitch: 0.9

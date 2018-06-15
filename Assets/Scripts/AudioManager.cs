@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -170,12 +171,12 @@ public class AudioManager : MonoBehaviour {
         //return tag.StartsWith("wood") || tag.StartsWith("carpet") || tag.StartsWith("grass") || tag.StartsWith("snow") || tag.StartsWith("concrete");
     }
 
-
-    public void PlayIntro(int part) {
-        int level = PlayerPrefs.GetInt("levelReached", 1);
+    
+    public void PlayIntro(int level) {
 
         string name = intros[level];
 
-        PlayNarrator(name + "_" + part);
+        PlayNarrator(name);
     }
+   
 }
