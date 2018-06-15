@@ -13,8 +13,9 @@ public class MenuMainController : MonoBehaviour {
 
     void Start() {
 		am = mainCamera.GetComponent<Animator>();
+        //Debug.Log("Level reached: "+PlayerPrefs.GetInt("levelReached", 1));
 
-        for(int i = 3; i >= PlayerPrefs.GetInt("levelReached", 1); i--){
+        for (int i = 3; i >= PlayerPrefs.GetInt("levelReached", 1); i--){
             levels[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, .1f);
             levels[i].GetComponent<ClickableGameObject>().isClickable = false;
         }
@@ -44,9 +45,19 @@ public class MenuMainController : MonoBehaviour {
         int level = PlayerPrefs.GetInt("levelReached", 1);
 
         if(index <= level) {
-            StartCoroutine(LoadLevel(index));
+
+            //Ovaj dio tu smo rekli da nije dobar, ali tako cemo jednostavno rješit kompatibilnost sa ostalim skriptama
+            if (index == 1) {
+                PlayerPrefs.SetInt("levelReached", index);
+
+            } else {
+                
+                PlayerPrefs.SetInt("levelReached", index - 1); // -1 jer je taj selektirani level kao novi sada (kao da smo tek prešli level prije)
+                index = 5; //Pokreni story-scene
+            }
+
+            StartCoroutine(LoadLevel(index)); 
         }
-        
     }
 
     private IEnumerator LoadLevel(int level) {

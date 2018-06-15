@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
-    //private static readonly List<string> scenes = new List<string>() { "GreenForest", "FantasyRoom", "FallenSchool", "ColdSnow" };
-    //public static readonly List<string> AllScenes = new List<string>() {"IdleScene", "GreenForest", "FantasyRoom", "FallenSchool", "ColdSnow" };
     private static readonly string IMAGE_NAME = "/Images/SavedScreen_";
 
     void Awake() { instance = this; }
@@ -45,7 +43,7 @@ public class GameManager : MonoBehaviour {
         int index = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("levelReached", index);
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(index != 4? 5:6);//Pokreni ili story-scenu ili finalnu scenu
     }
 
     public void Alert (Transform alert) {

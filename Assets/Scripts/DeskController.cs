@@ -63,6 +63,8 @@ public class DeskController : MonoBehaviour {
     }
 
     private IEnumerator LoadLevel(int level) {
+
+        PlayerPrefs.SetInt("levelReached", level); //Dodano radi sinkronizacije menu-scene
         AsyncOperation async = SceneManager.LoadSceneAsync(level);
 
         float perc = 0.01f;
