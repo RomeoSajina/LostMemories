@@ -7,4 +7,13 @@ public class Dialogue {
 
     [TextArea(1, 3)]
     public string[] sentences;
+
+    [TextArea(1, 3)]
+    public string[] level2;
+
+    [TextArea(1, 3)]
+    public string[] level3;
+
+    [TextArea(1, 3)]
+    public string[] level4;
 }

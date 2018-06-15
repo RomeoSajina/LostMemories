@@ -1717,6 +1717,9 @@ MonoBehaviour:
     - Here, take my camera!
     - Go and create your own ones!
     - I gues it's my turn now....
+    level2: []
+    level3: []
+    level4: []
   cameraAlice: {fileID: 237279359}
   cameraEnemy: {fileID: 1799378010}
 --- !u!1 &928878638
@@ -3596,9 +3599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adb48440fefc4044a5526ff9b46d43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - nesto...
 --- !u!4 &1929186891 stripped
 Transform:
   m_PrefabParentObject: {fileID: 434002, guid: 79ab12630ceb1b141b300aa1b7451c94, type: 2}
