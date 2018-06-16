@@ -19,8 +19,8 @@ public class DeskController : MonoBehaviour {
 		Time.timeScale = 1;
 
         sceneIndex = PlayerPrefs.GetInt("levelReached", 1);
-
-        Debug.Log(sceneIndex);
+        
+        //Debug.Log(sceneIndex);
 
 		// Postavljanje svega na neaktivno
 		for(int i = 0; i < 3; i++){

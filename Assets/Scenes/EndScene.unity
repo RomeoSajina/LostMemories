@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -385,6 +385,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 93527721}
+--- !u!1001 &147603758
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -45.66815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.0658493
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 86.0269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450584221965284, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 824aa6b8b8cbc58418dd174502d8a64f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &187171876
 Prefab:
   m_ObjectHideFlags: 0
@@ -1700,15 +1742,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Look at her now....
-    - Back in in the woods where it all began.
-    - 'Well, you tought I could not make it,
+    - Back in the woods where it all began.
+    - 'Well, you thought I could not make it,
 
       but you were wrong....'
     - You must be very upset now....
     - 'What you have to realize is that
 
       stealing from others won''t make you happy....'
-    - This is the only way i know of.
+    - This is the only way i know.
     - I just wanted to be happy!
     - Hey, I am willing to give you a present....
     - 'I gained back all my memories, but now
@@ -1716,7 +1758,7 @@ MonoBehaviour:
       it''s time for you to create your happy memories!'
     - Here, take my camera!
     - Go and create your own ones!
-    - I gues it's my turn now....
+    - Well, I guess it's now my turn....
     level2: []
     level3: []
     level4: []
@@ -3192,7 +3234,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1799378010}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!124 &1799378012
 Behaviour:
   m_ObjectHideFlags: 0

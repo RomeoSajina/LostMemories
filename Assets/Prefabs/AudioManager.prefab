@@ -170,6 +170,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: background
+    clip: {fileID: 8300000, guid: 8d281e47849401047a42a1333cb9915e, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   narratorSounds:
   - name: green_forest_intro
     clip: {fileID: 8300000, guid: 34e45bbc7428d0c4dbec67fe62c4ca1b, type: 3}
@@ -290,6 +299,114 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: battery
     clip: {fileID: 8300000, guid: 5d36f28d6b389854f9b3924650a8d317, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_1
+    clip: {fileID: 8300000, guid: a6aef02efd10f8d488ef8301d73fdefa, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_2
+    clip: {fileID: 8300000, guid: 03ce9032f89d550498cd6b97471f1448, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_3
+    clip: {fileID: 8300000, guid: 6bf88f5edaf695440af652d1cf17025e, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_4
+    clip: {fileID: 8300000, guid: 1646e94a7d2adfa4ea3101a0895036d3, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_5
+    clip: {fileID: 8300000, guid: d93074dbedaf6f84f9706c885bf22aba, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_6
+    clip: {fileID: 8300000, guid: 4d5d69602dcbfb14f83046bdbf9b6d0e, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_7
+    clip: {fileID: 8300000, guid: 95c1b8a0ecac39249b271725d8f9d393, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_8
+    clip: {fileID: 8300000, guid: 87c8fff43b211d44aa0bc7b333c97f38, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_9
+    clip: {fileID: 8300000, guid: c552f88a7b40f8c47b29f8e095e2e78c, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_10
+    clip: {fileID: 8300000, guid: 324252306f693c0419bd4a454eef52a7, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_11
+    clip: {fileID: 8300000, guid: 65596de26e8ab024c94b8121f66dfddf, type: 3}
+    volume: 1
+    volumeVariance: 1
+    pitch: 0.9
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: end_12
+    clip: {fileID: 8300000, guid: fa362df12ec8ee742992749e8779ceda, type: 3}
     volume: 1
     volumeVariance: 1
     pitch: 0.9

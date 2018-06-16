@@ -19,6 +19,7 @@ public class MenuMainController : MonoBehaviour {
             levels[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, .1f);
             levels[i].GetComponent<ClickableGameObject>().isClickable = false;
         }
+        AudioManager.instance.Play("background");
     }
 
 	public void Tutorial() {
@@ -56,7 +57,8 @@ public class MenuMainController : MonoBehaviour {
                 index = 5; //Pokreni story-scene
             }
 
-            StartCoroutine(LoadLevel(index)); 
+            StartCoroutine(LoadLevel(index));
+            AudioManager.instance.StopAll();
         }
     }
 

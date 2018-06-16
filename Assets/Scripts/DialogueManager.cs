@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
@@ -13,18 +14,20 @@ public class DialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
 
+    private int index = 1;
+
 	void Start () {
         sentences = new Queue<string>();
         cameraEnemy.SetActive(true);
         cameraAlice.SetActive(false);
         StartDialogue(dialogue);
         
-        Debug.Log("Start");
+        //Debug.Log("Start");
     }
 
 
     public void StartDialogue(Dialogue dialogue) {
-        Debug.Log("Start");
+        //Debug.Log("Start");
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -54,9 +57,13 @@ public class DialogueManager : MonoBehaviour {
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
+
+        AudioManager.instance.StopAll(true);
+        AudioManager.instance.PlayNarrator("end_" + index++);
+
         //StopAllCoroutines();
         //StartCoroutine(TypeSentence(sentence));
-        Debug.Log(sentence + " " + sentences.Count);
+        //Debug.Log(sentence + " " + sentences.Count);
     }
 
     IEnumerator TypeSentence(string sentence) {
@@ -68,7 +75,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
-        Debug.Log("End");
+        //Debug.Log("End");
+        SceneManager.LoadScene(0);//MainMenu
     }
 
 }

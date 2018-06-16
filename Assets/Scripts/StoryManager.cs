@@ -1,27 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour {
 
     public Text dialogueText;
     public Dialogue dialogue;
-    public int level = 0;
+    public int level = 1;
 
     private Queue<string> sentences;
 
     void Start(){
         sentences = new Queue<string>();
+
+        level = PlayerPrefs.GetInt("levelReached", 1) + 1;
+
         StartDialogue(dialogue);
 
-        Debug.Log("Start");
+        //Debug.Log("Start");
     }
 
 
     public void StartDialogue(Dialogue dialogue){
         
-        Debug.Log("Start");
+        //Debug.Log("Start");
         sentences.Clear();
 
         if(level == 2) {
@@ -53,7 +57,7 @@ public class StoryManager : MonoBehaviour {
         dialogueText.text = sentence;
         //StopAllCoroutines();
         //StartCoroutine(TypeSentence(sentence));
-        Debug.Log(sentence + " " + sentences.Count);
+        //Debug.Log(sentence + " " + sentences.Count);
     }
 
     IEnumerator TypeSentence(string sentence){
@@ -71,6 +75,6 @@ public class StoryManager : MonoBehaviour {
     }
 
     void EndDialogue(){
-        Debug.Log("End");
+        //Debug.Log("End");
     }
 }

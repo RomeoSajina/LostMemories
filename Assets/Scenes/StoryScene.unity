@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2045,7 +2045,8 @@ MonoBehaviour:
     level4:
     - The snow is so cold that it makes your nose go red.
     - The fog is thick and you can't see very far away.
-    - You are lost and trying to find the way back home.
+    - "You are lost and trying to find the way back home, \nbut in front of you are
+      someones footsteps \nor maybe they are yours?\r"
   level: 3
 --- !u!4 &1921545336
 Transform:
