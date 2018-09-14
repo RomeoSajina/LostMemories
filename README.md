@@ -1,6 +1,10 @@
 # LostMemories
 
+LostMemories is a student project.
 
+The objective of the game is to outsmart the enemy in each level and bring back your old memories. You outsmart them by solving riddles for clues on how to beat your enemy.
+
+# Screenshots
 
 
 # TODO list before running the project:
