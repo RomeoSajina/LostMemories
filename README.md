@@ -6,6 +6,12 @@ The objective of the game is to outsmart the enemy in each level and bring back 
 
 # Screenshots
 
+![Screenshot One](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img01.png)
+![Screenshot Two](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img02.png)
+![Screenshot Three](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img03.png)
+![Screenshot Four](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img04.png)
+![Screenshot Five](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img05.png)
+![Screenshot Six](https://github.com/RomeoSajina/LostMemories/blob/master/Screenshots/img06.png)
 
 # TODO list before running the project:
  - unzip file: /Assets/Resources/levels/FallenSchool/Show/LightingData.rar
